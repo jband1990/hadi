@@ -656,6 +656,27 @@
             cursor: pointer;
             z-index: 2;
         }
+
+        #slider #slider_navigator ul {
+            padding: 0px;
+            height: 100%;
+        }
+
+        #slider #slider_navigator ul li {
+            width: 178px;
+            height: 100%;
+            float: right;
+        }
+
+        #slider #slider_navigator ul li a {
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            display: block;
+            line-height: 47px;
+            color: #fff;
+            cursor: pointer;
+        }
     </style>
     <div id="content" style="width: 902px;float: left;margin-top: 5px;">
         <div id="slider" style="position: relative;">
@@ -681,7 +702,31 @@
                     <img src="images/slider5.jpg"/>
                 </a>
             </div>
-            <div id="slider_navigator"></div>
+            <div id="slider_navigator">
+                <ul>
+                    <li>
+                        <a class="yekan fontsm">
+                            محصولات کالای خواب
+                        </a>
+                    </li>
+                    <li>
+                        <a class="yekan fontsm">
+                            لوازم جانبی دوربین </a>
+                    </li>
+                    <li>
+                        <a class="yekan fontsm">
+                            سری جدید Vaio </a>
+                    </li>
+                    <li>
+                        <a class="yekan fontsm">
+                            کتاب معنوی </a>
+                    </li>
+                    <li>
+                        <a class="yekan fontsm">
+                            لوازم خانگی BOSCH </a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <button>start slider!</button>
     </div>
@@ -705,7 +750,7 @@
         sliderItems.eq(nextSlide - 1).fadeIn(100);
         nextSlide++;
     }
-    function gotonext() {
+    function goToNext() {
         slider();
 
     }
@@ -715,10 +760,19 @@
 
     });
 
-    function gotoprev() {
+    function goToPrev() {
         slider();
 
     }
+    function goToSlide(index) {
+        nextSlide = index;
+        slider();
+    }
+    $('#slider #slider_navigator ul li').click(function () {
+        var index = $(this).index();
+        goToSlide(index + 1);
+
+    })
 
     $('#slider #prev').click(function () {
         nextSlide = nextSlide - 2;
