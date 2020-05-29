@@ -471,7 +471,7 @@
         <img class="banner_image" src="images/banner.jpg"/>
     </div>
     <div id="sidebar_right">
-        <img class="sideimage" src="images/Euro2016-290.52.jpg"/>
+        <img class="sideimage" src="images/Euro2016-290.52.jpg" style="border-radius: 4px;"/>
         <ul id="digikala_tv">
             <li>
                 <a>
@@ -663,7 +663,7 @@
         }
 
         #slider #slider_navigator ul li {
-            width: 178px;
+            width: 180.4px;
             height: 100%;
             float: right;
         }
@@ -677,6 +677,28 @@
             color: #fff;
             cursor: pointer;
         }
+
+        #slider #slider_navigator .active > a {
+            background: #fff;
+            color: #000;
+            position: relative;
+        }
+
+        #slider #slider_navigator .active > a::after {
+            content: " ";
+            position: absolute;
+            top: -13px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 12.5px 13px 12.5px;
+            border-color: transparent transparent #ffffff transparent;
+
+        }
+
     </style>
     <div id="content" style="width: 902px;float: left;margin-top: 5px;">
         <div id="slider" style="position: relative;">
@@ -728,7 +750,223 @@
                 </ul>
             </div>
         </div>
-        <button>start slider!</button>
+        <style>
+            #services-feature {
+                background: #fff;
+                height: 75px;
+                box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
+                margin: 5px 0px;
+                width: 902px;
+                border-radius: 4px;
+                overflow: hidden;
+            }
+
+            #services-feature ul {
+                height: 100%;
+                width: 100%;
+                padding: 0;
+            }
+
+            #services-feature ul li {
+                float: right;
+                height: 100%;
+                width: 180.4px;
+            }
+
+            #services-feature ul li a {
+                line-height: 72px;
+                vertical-align: 10px;
+                padding: 0 13px;
+                display: block;
+                height: 100%;
+                font-size: 10pt;
+            }
+
+            #services-feature ul li a i {
+                background: url("images/slices.png") no-repeat;
+                width: 35px;
+                height: 24px;
+                display: inline-block;
+                margin-top: 22px;
+                float: right;
+                margin-left: 7px;
+            }
+
+        </style>
+        <div id="services-feature">
+            <ul>
+                <li>
+                    <a class="yekan">
+                        <i style="background-position: -210px -473px;">
+
+                        </i>
+                        7 روز ضمانت بازگشت
+                    </a>
+                </li>
+                <li>
+                    <a class="yekan" style="padding: 0 21px;">
+                        <i style="background-position: -263px -473px;">
+
+                        </i>
+                        پرداخت در محل </a>
+                </li>
+                <li>
+                    <a class="yekan">
+                        <i style="background-position: -157px -473px;">
+
+                        </i>
+                        ضمانت اصل بودن کالا </a>
+                </li>
+                <li>
+                    <a class="yekan" style="padding: 0 27px;">
+                        <i style="background-position: -316px -473px;">
+
+                        </i>
+                        تحویل اکسپرس </a>
+                </li>
+                <li>
+                    <a class="yekan" style="padding: 0 16px;">
+                        <i style="background-position: -103px -473px;">
+
+                        </i>
+                        تضمین بهترین قیمت
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <style>
+            #slider2 {
+                width: 902px;
+                height: 304px;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.19);
+                border-radius: 4px;
+                overflow: hidden;
+                background: #fff;
+            }
+
+            #slider2_content {
+                width: 704.5px;
+                height: 100%;
+                float: right;
+                background: url(images/slider2_bg.jpg);
+            }
+
+            #slider2_navigator {
+                width: 196.5px;
+                height: 100%;
+                float: left;
+                border-right: 1px solid #ccc;
+                background-color: #f4f4f4;
+            }
+
+            #slider2_navigator ul {
+                padding: 0;
+            }
+
+            #slider2_navigator ul li {
+                height: 38px;
+                width: 100%;
+            }
+
+            #slider2_navigator ul li a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                font-family: yekan;
+                font-size: 10pt;
+                line-height: 37px;
+            }
+
+            #slider_content_right {
+                width: 400px;
+                height: 100%;
+                float: right;
+            }
+
+            #slider_content_left {
+                width: 304.5px;
+                height: 100%;
+                float: left;
+            }
+
+            #slider2_content a {
+                display: block;
+                height: 100%;
+            }
+
+            #slider_content_left p {
+                text-align: center;
+                font-size: 15pt;
+                font-family: yekan;
+            }
+
+            #slider2_content a #slider_content_left img {
+                width: 220px;
+                margin-right: 37px;
+            }
+        </style>
+        <div id="slider2">
+            <div id="slider2_content">
+                <a>
+                    <div id="slider_content_right"></div>
+                    <div id="slider_content_left">
+                        <p>
+                            Xvision Model
+                        </p>
+                        <img src="images/slider2_item1.jpg"/>
+                    </div>
+
+                </a>
+            </div>
+            <div id="slider2_navigator">
+                <ul>
+                    <li>
+                        <a>
+
+                            دسته ی بازی </a>
+
+                    </li>
+                    <li>
+                        <a>
+                            کیف کلاسوری جنیوس
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            کیف دوشی چرم طبیعی
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            Xiaomi ZI5 Alkaline AA
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            ردیاب ماشین
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            گیج بادام پی
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            ویژه اعضای دیجیکالا
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            ویژه اعضای دیجیکالا
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
     </div>
 </div>
 <script>
@@ -736,6 +974,9 @@
     var sliderItems = sliderTag.find('.item');
     var numItems = sliderItems.length;
     var nextSlide = 1;
+    var sliderNavigators = sliderTag.find("#slider_navigator ul li");
+    var timeOut = 5000;
+
 
     function slider() {
 
@@ -748,14 +989,23 @@
 
         sliderItems.hide();
         sliderItems.eq(nextSlide - 1).fadeIn(100);
+        sliderNavigators.removeClass('active');
+        sliderNavigators.eq(nextSlide - 1).addClass('active');
         nextSlide++;
     }
+    sliderTag.mouseleave(function () {
+        clearInterval(sliderInterval);
+        sliderInterval = setInterval(slider, timeOut);
+    })
+    slider();
+    var sliderInterval = setInterval(slider, timeOut);
     function goToNext() {
         slider();
 
     }
 
     $('#slider #next').click(function () {
+        clearInterval(sliderInterval);
         slider();
 
     });
@@ -768,13 +1018,15 @@
         nextSlide = index;
         slider();
     }
-    $('#slider #slider_navigator ul li').click(function () {
+    $('#slider #slider_navigator ul li').hover(function () {
+        clearInterval(sliderInterval);
         var index = $(this).index();
         goToSlide(index + 1);
 
     })
 
     $('#slider #prev').click(function () {
+        clearInterval(sliderInterval);
         nextSlide = nextSlide - 2;
         slider();
 

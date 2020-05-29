@@ -16,10 +16,20 @@
     <span>2541</span>
     <span>111</span>
     <div id="child">hadi</div>
+    <button>Stop!</button>
 </div>
 </body>
 
 <script>
+ var timer = setInterval(function () {
+    alert('clicksite.ir');},
+    3000);
+
+
+    $('button').click(function () {
+        clearInterval(timer);
+    })
+
 
 </script>
 
