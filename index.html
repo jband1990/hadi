@@ -6,6 +6,8 @@
         فروشگاه اینترنتی دیجیکالا
     </title>
     <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery.flipTimer.js"></script>
+    <link href="css/flipTimer.css" rel="stylesheet">
 </head>
 <body style="margin: 0;background-color: rgba(0,0,0,0.16)">
 <style>
@@ -364,8 +366,8 @@
         display: block;
         position: absolute;
         top: 48px;
-        left: 0px;
-        right: 0px;
+        left: 0;
+        right: 0;
         margin: auto;
         text-align: center;
     }
@@ -755,7 +757,7 @@
                 background: #fff;
                 height: 75px;
                 box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
-                margin: 5px 0px;
+                margin: 5px 0;
                 width: 902px;
                 border-radius: 4px;
                 overflow: hidden;
@@ -842,6 +844,7 @@
                 border-radius: 4px;
                 overflow: hidden;
                 background: #fff;
+                position: relative;
             }
 
             #slider2_content {
@@ -869,6 +872,7 @@
             }
 
             #slider2_navigator ul li a {
+                cursor: pointer;
                 display: block;
                 width: 100%;
                 height: 100%;
@@ -878,13 +882,13 @@
                 line-height: 37px;
             }
 
-            #slider_content_right {
+            .slider_content_right {
                 width: 400px;
                 height: 100%;
                 float: right;
             }
 
-            #slider_content_left {
+            .slider_content_left {
                 width: 304.5px;
                 height: 100%;
                 float: left;
@@ -895,26 +899,217 @@
                 height: 100%;
             }
 
-            #slider_content_left p {
+            .slider_content_left  p {
                 text-align: center;
                 font-size: 15pt;
                 font-family: yekan;
+                margin-top: 8px;
+                margin-right: 36px;
+                position: absolute;
             }
 
-            #slider2_content a #slider_content_left img {
+            #slider2_content a .slider_content_left img {
                 width: 220px;
                 margin-right: 37px;
+                margin-top: 53px;
+
+            }
+
+            .slider_content_right .title {
+                color: red;
+                font-family: yekan;
+                font-size: 12pt;
+                padding-right: 24px;
+                padding-top: 36px;
+                margin: 0;
+            }
+
+            .slider_content_right .price_info {
+                height: 35px;
+                padding-top: 0;
+                padding-right: 25px;
+            }
+
+            .price_info_old {
+                width: 75px;
+                height: 100%;
+                background-color: #ccc;
+                float: right;
+                position: relative;
+                text-align: center;
+                color: #000;
+                font-weight: bold;
+                line-height: 36px;
+                font-family: yekan;
+                font-size: 20pt;
+            }
+
+            .price_info_old::before {
+                content: " ";
+                position: absolute;
+                left: -11px;
+                top: 10px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 8px 12px 8px 0;
+                border-color: transparent #cccccc transparent transparent;
+                z-index: 2;
+            }
+
+            .price_info_old::after {
+                content: " ";
+                position: absolute;
+                top: 16px;
+                left: 2px;
+                width: 90%;
+                height: 0;
+                border-bottom: 2px solid #fff;
+                transform: rotate(-22deg);
+            }
+
+            .price_info_new {
+                width: 155px;
+                height: 100%;
+                background-color: red;
+                float: right;
+                margin-right: 2px;
+                position: relative;
+                text-align: center;
+                color: #000;
+                font-weight: bold;
+                line-height: 30px;
+                font-size: 10pt;
+                font-family: yekan;
+
+            }
+
+            .price_info_new::before {
+                content: " ";
+                position: absolute;
+                right: 0;
+                top: 10px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 8px 12px 8px 0;
+                border-color: transparent #ffffff transparent transparent;
+            }
+
+            .flipTimer, .flipTimer div {
+                direction: ltr !important;
+            }
+
+            .flipTimer {
+                position: absolute;
+                top: 190px;
+                right: -142px;
+                transform: scale(.3);
+            }
+
+            .sale_finished {
+                width: 704.5px;
+                height: 100%;
+                background-color: rgba(0, 0, 0, .01);
+                position: absolute;
+                right: 0;
+                top: 0;
+                color: red;
+                text-align: center;
+                font-family: yekan;
+                font-size: 30pt;
+                line-height: 360px;
+                display: none;
+                z-index: 2;
+            }
+                #slider2_navigator .active{
+                    background-color: #ff252c;
+                    color:#ffffff;
+                    position: relative;
+                }
+            #slider2_navigator .active::before{
+                position: absolute;
+                width: 0;
+                height: 0;
+                top:0;
+                right:-17px;
+                content: " ";
+                border-style: solid;
+                border-width: 19px 0 19px 17px;
+                border-color: transparent transparent transparent #ff252c;
+
             }
         </style>
         <div id="slider2">
+
+            <div class="flipTimer">
+
+                <div class="hours"></div>
+                <div class="minutes"></div>
+                <div class="seconds"></div>
+            </div>
+
+            <div class="sale_finished">
+                تمام شد!
+            </div>
             <div id="slider2_content">
-                <a>
-                    <div id="slider_content_right"></div>
-                    <div id="slider_content_left">
-                        <p>
+                <a class="item">
+                    <div class="slider_content_right">
+                        <p class="title">
+                            جشنواره ماه نو
+
+                        </p>
+                        <div class="price_info">
+                            <div class="price_info_old">
+                                25
+                            </div>
+                            <div class="price_info_new">
+                                <p style="font-size: 20pt;float: right;margin-right: 29px;margin-top: 4px;">18.5</p>
+
+                                هزار تومان
+                            </div>
+                            <p class="yekan fontsm" style="float:right;width: 100%;margin: 10px;">
+                                توان : 2.5 کیلو وات
+                            </p>
+                            <p class="yekan fontsm"
+                               style="float:right;width: 100%;margin-top: -16px;margin-right: 8px;">
+                                با قابلیت تنظیم مصرف
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slider_content_left">
+                        <p style="width: 230px;line-height: 60px;">
                             Xvision Model
                         </p>
                         <img src="images/slider2_item1.jpg"/>
+                    </div>
+
+                </a>
+                <a class=item>
+                    <div class="slider_content_right">
+                        <p class="title">
+                            خمیر دندان
+                        </p>
+                        <div class="price_info">
+                            <div class="price_info_old">
+                                10
+                            </div>
+                            <div class="price_info_new">
+                                <p style="font-size: 20pt;float: right;margin-right: 29px;margin-top: 4px;">7</p>
+
+                                هزار تومان
+                            </div>
+                            <p class="yekan fontsm" style="float:right;width: 100%;margin: 10px;">
+                                با قدرت سفید کنندگی بسیار عالی </p>
+                            <p class="yekan fontsm"
+                               style="float:right;width: 100%;margin-top: -16px;margin-right: 8px;">
+                                مناسب برای دندا ن های حساس </p>
+                        </div>
+                    </div>
+                    <div class="slider_content_left">
+                        <p>
+گیتار آکوستیک یاماها مدل F310                        </p>
+                        <img src="images/slider2_2.jpg"/>
                     </div>
 
                 </a>
@@ -967,9 +1162,132 @@
             </div>
 
         </div>
+        <style>
+        .sliderscroll{
+            width:902px;
+            height:310px;
+            background-color: #ffffff;
+            margin-top: 10px;
+            border-radius: 4px;
+            box-shadow: 0 1px 2px rgba(0,0,0,.01);
+            overflow: hidden;
+        }
+            .sliderscroll h3{
+                font-family: yekan;
+                font-size: 12pt;
+                font-weight: normal;
+                background-color: #eeeeee;
+                margin:0;
+                padding-right: 10px;
+                height:35px;
+                padding-top:5px;
+                box-shadow: 0 1px 2px rgba(0,0,0,1);
+                overflow: hidden;
+            }
+            .sliderscroll_content{
+                height:274px;
+            }
+            .sliderscroll_prev, .sliderscroll_next{
+                height:100%;
+                width:55px;
+                float: right;
+            }
+            .sliderscroll_main{
+                width:792px;
+                height:100%;
+                float: right;
+            }
+            .sliderscroll_prev span{
+                width: 30px;
+                height: 42px;
+                background: url(images/slices.png) no-repeat;
+                background-position: -852px -677px;
+                display: block;
+                position: relative;
+                top: 107px;
+                right: 10px;
+            }
+        .sliderscroll_next span{
+            width: 30px;
+            height: 42px;
+            background: url(images/slices.png) no-repeat;
+            background-position: -805px -677px;
+            display: block;
+            position: relative;
+            top: 107px;
+            right: 10px;
+        }
+        .sliderscroll_main ul{
+            padding: 0;
+            height: 100%;
+        }
+        .sliderscroll_main ul li{
+            height: 100%;
+            width: 198px;
+        }
+        .sliderscroll_main ul li a{
+            height: 100%;
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+        .sliderscroll_main p{
+            text-align: center;
+            margin: 0;
+            color:green;
+            font-size: 13pt;
+        }
+        .sliderscroll_main span{
+            text-align: center;
+          display: block;
+        }
+        </style>
+        <div class="sliderscroll">
+            <h3>
+                فقط در دیجیکالا
+            </h3>
+            <div class="sliderscroll_content">
+            <div class="sliderscroll_prev">
+                <span>
+
+                </span>
+            </div>
+            <div class="sliderscroll_main">
+                <ul>
+                    <li>
+                        <a>
+                            <img src="images/sliderscroll_1.jpg" style="padding-top:17px;"/>
+                            <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                            <span class="yekan">
+                                lenovo B580-H-15 inch
+                            </span>
+                            <p calss="yekan price">
+                                3,200,000 تومان
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sliderscroll_next">
+                <span>
+
+                </span>
+            </div>
+            </div>
+        </div>
     </div>
 </div>
 <script>
+    $('.flipTimer').flipTimer({
+        direction: 'down',
+        date: 'may 31,2020 22:25:00',
+        callback: function () {
+            $('.slider_content_right').css('opacity', .3);
+            $('.slider_content_left').css('opacity', .3);
+            $('.sale_finished').fadeIn(200);
+
+        }
+    });
     var sliderTag = $('#slider');
     var sliderItems = sliderTag.find('.item');
     var numItems = sliderItems.length;
@@ -1034,7 +1352,52 @@
     $('button').click(function () {
         slider();
     });
+//    main slider
+    var sliderTag2 = $('#slider2');
+    var sliderItems2 = sliderTag2.find('.item');
+    var numItems2 = sliderItems2.length;
+    var nextSlide2 = 1;
+    var sliderNavigators2 = sliderTag2.find("#slider2_navigator ul li");
+    var timeOut2 = 5000;
 
+
+    function slider2() {
+
+        if (nextSlide2 > numItems2) {
+            nextSlide2 = 1;
+        }
+        if (nextSlide2 < 1) {
+            nextSlide2 = numItems;
+        }
+
+        sliderItems2.hide();
+        sliderItems2.eq(nextSlide2 - 1).fadeIn(100);
+        sliderNavigators2.removeClass('active');
+        sliderNavigators2.eq(nextSlide2 - 1).addClass('active');
+        nextSlide2 ++;
+    }
+    sliderTag2.mouseleave(function () {
+        clearInterval(sliderInterval2);
+        sliderInterval2 = setInterval(slider2, timeOut2);
+    })
+    slider2();
+    var sliderInterval2 = setInterval(slider2, timeOut2);
+
+    function goToSlide2(index) {
+        nextSlide2 = index;
+        slider2();
+    }
+    $('#slider2 #slider2_navigator ul li').click(function () {
+        clearInterval(sliderInterval2);
+        var index = $(this).index();
+        goToSlide2(index + 1);
+
+    })
+
+    $('button').click(function () {
+        slider2();
+    });
+//    slider2
     var timer = [];
     $('#menu_top li').hover(function () {
         var tag = $(this)
