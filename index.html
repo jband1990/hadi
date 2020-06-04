@@ -899,7 +899,7 @@
                 height: 100%;
             }
 
-            .slider_content_left  p {
+            .slider_content_left p {
                 text-align: center;
                 font-size: 15pt;
                 font-family: yekan;
@@ -1022,17 +1022,19 @@
                 display: none;
                 z-index: 2;
             }
-                #slider2_navigator .active{
-                    background-color: #ff252c;
-                    color:#ffffff;
-                    position: relative;
-                }
-            #slider2_navigator .active::before{
+
+            #slider2_navigator .active {
+                background-color: #ff252c;
+                color: #ffffff;
+                position: relative;
+            }
+
+            #slider2_navigator .active::before {
                 position: absolute;
                 width: 0;
                 height: 0;
-                top:0;
-                right:-17px;
+                top: 0;
+                right: -17px;
                 content: " ";
                 border-style: solid;
                 border-width: 19px 0 19px 17px;
@@ -1108,7 +1110,7 @@
                     </div>
                     <div class="slider_content_left">
                         <p>
-گیتار آکوستیک یاماها مدل F310                        </p>
+                            گیتار آکوستیک یاماها مدل F310 </p>
                         <img src="images/slider2_2.jpg"/>
                     </div>
 
@@ -1163,41 +1165,47 @@
 
         </div>
         <style>
-        .sliderscroll{
-            width:902px;
-            height:310px;
-            background-color: #ffffff;
-            margin-top: 10px;
-            border-radius: 4px;
-            box-shadow: 0 1px 2px rgba(0,0,0,.01);
-            overflow: hidden;
-        }
-            .sliderscroll h3{
+            .sliderscroll {
+                width: 902px;
+                height: 310px;
+                background-color: #ffffff;
+                margin-top: 10px;
+                border-radius: 4px;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, .01);
+                overflow: hidden;
+            }
+
+            .sliderscroll h3 {
                 font-family: yekan;
                 font-size: 12pt;
                 font-weight: normal;
                 background-color: #eeeeee;
-                margin:0;
+                margin: 0;
                 padding-right: 10px;
-                height:35px;
-                padding-top:5px;
-                box-shadow: 0 1px 2px rgba(0,0,0,1);
+                height: 35px;
+                padding-top: 5px;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
                 overflow: hidden;
             }
-            .sliderscroll_content{
-                height:274px;
+
+            .sliderscroll_content {
+                height: 274px;
             }
-            .sliderscroll_prev, .sliderscroll_next{
-                height:100%;
-                width:55px;
+
+            .sliderscroll_prev, .sliderscroll_next {
+                height: 100%;
+                width: 55px;
                 float: right;
             }
-            .sliderscroll_main{
-                width:792px;
-                height:100%;
+
+            .sliderscroll_main {
+                width: 792px;
+                height: 100%;
                 float: right;
+                overflow: hidden;
             }
-            .sliderscroll_prev span{
+
+            .prev {
                 width: 30px;
                 height: 42px;
                 background: url(images/slices.png) no-repeat;
@@ -1206,78 +1214,483 @@
                 position: relative;
                 top: 107px;
                 right: 10px;
+                cursor: pointer;
             }
-        .sliderscroll_next span{
-            width: 30px;
-            height: 42px;
-            background: url(images/slices.png) no-repeat;
-            background-position: -805px -677px;
-            display: block;
-            position: relative;
-            top: 107px;
-            right: 10px;
-        }
-        .sliderscroll_main ul{
-            padding: 0;
-            height: 100%;
-        }
-        .sliderscroll_main ul li{
-            height: 100%;
-            width: 198px;
-        }
-        .sliderscroll_main ul li a{
-            height: 100%;
-            width: 100%;
-            display: block;
-            text-align: center;
-        }
-        .sliderscroll_main p{
-            text-align: center;
-            margin: 0;
-            color:green;
-            font-size: 13pt;
-        }
-        .sliderscroll_main span{
-            text-align: center;
-          display: block;
-        }
+
+            .next {
+                width: 30px;
+                height: 42px;
+                background: url(images/slices.png) no-repeat;
+                background-position: -805px -677px;
+                display: block;
+                position: relative;
+                top: 107px;
+                right: 10px;
+                cursor: pointer;
+            }
+
+            .sliderscroll_main ul {
+                padding: 0;
+                height: 100%;
+            }
+
+            .sliderscroll_main ul li {
+                height: 100%;
+                width: 198px;
+                float: right;
+            }
+
+            .sliderscroll_main ul li a {
+                height: 100%;
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+
+            .sliderscroll_main p {
+                text-align: center;
+                margin: 0;
+                color: green;
+                font-size: 13pt;
+            }
+
+            .sliderscroll_main span {
+                text-align: center;
+                display: block;
+            }
         </style>
         <div class="sliderscroll">
             <h3>
                 فقط در دیجیکالا
             </h3>
             <div class="sliderscroll_content">
-            <div class="sliderscroll_prev">
-                <span>
+                <div class="sliderscroll_prev">
+                <span class="prev" onclick="sliderScroll('Right',this);">
 
                 </span>
-            </div>
-            <div class="sliderscroll_main">
-                <ul>
-                    <li>
-                        <a>
-                            <img src="images/sliderscroll_1.jpg" style="padding-top:17px;"/>
-                            <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
-                            <span class="yekan">
+                </div>
+                <div class="sliderscroll_main">
+                    <ul>
+                        <li>
+                            <a>
+                                <img src="images/sliderscroll_1.jpg" style="padding-top:17px;"/>
+                                <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                                <span class="yekan">
                                 lenovo B580-H-15 inch
                             </span>
-                            <p calss="yekan price">
-                                3,200,000 تومان
-                            </p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="sliderscroll_next">
-                <span>
+                                <p calss="yekan price">
+                                    3,200,000 تومان
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="images/scrollslider_2.jpg" style="padding-top:17px;"/>
+                                <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                                <span class="yekan">
+Vivo Sony                             </span>
+                                <p calss="yekan price">
+                                    5,500,000 تومان
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="images/scrollslider_3.jpg" style="padding-top:17px;"/>
+                                <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                                <span class="yekan">
+Acer yumpstam cor                            </span>
+                                <p calss="yekan price">
+                                    4,100,000 تومان
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="images/scrollslider_4.jpg" style="padding-top:17px;"/>
+                                <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                                <span class="yekan">
+Dell latitude Model                            </span>
+                                <p calss="yekan price">
+                                    8,000,000 تومان
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="images/scrollslider_5.jpg" style="padding-top:17px;"/>
+                                <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                                <span class="yekan">
+MSI Gaming Series                            </span>
+                                <p calss="yekan price">
+                                    30,000,000 تومان
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="images/sliderscroll_1.jpg" style="padding-top:17px;"/>
+                                <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                                <span class="yekan">
+                                lenovo B580-H-15 inch
+                            </span>
+                                <p calss="yekan price">
+                                    3,200,000 تومان
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="images/scrollslider_2.jpg" style="padding-top:17px;"/>
+                                <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                                <span class="yekan">
+Vivo Sony                             </span>
+                                <p calss="yekan price">
+                                    5,500,000 تومان
+                                </p>
+                            </a>
+                        <li>
+                            <a>
+                                <img src="images/scrollslider_4.jpg" style="padding-top:17px;"/>
+                                <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                                <span class="yekan">
+Dell latitude Model                            </span>
+                                <p calss="yekan price">
+                                    8,000,000 تومان
+                                </p>
+                            </a>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sliderscroll_next">
+                <span class="next" onclick="sliderScroll('left',this);">
 
                 </span>
-            </div>
+                </div>
             </div>
         </div>
+        <style>
+            .direct_access {
+                width: 290px;
+                height: 190px;
+                background-color: #ffffff;
+                float: right;
+                display: block;
+                margin-top: 10px;
+                border-radius: 4px;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, .19);
+                overflow: hidden;
+                margin-left: 10px;
+            }
+        </style>
+        <a class="direct_access">
+            <img src="images/direct-access1.jpg"/>
+        </a>
+        <a class="direct_access" style="width:601px;margin-left: 0;">
+            <img src="images/direct-access2.jpg"/>
+        </a>
+        <a class="direct_access">
+            <img src="images/direct-access3.jpg"/>
+        </a>
+        <a class="direct_access" style="width:300px;">
+            <img src="images/direct-access4.jpg"/>
+        </a>
+        <a style="margin-left: 0;" class="direct_access">
+            <img src="images/direct-access5.jpg"/>
+        </a>
+        <a class="direct_access">
+            <img src="images/direct-access7.jpg"/>
+        </a>
+        <a class="direct_access" style="width:601px;margin-left: 0;">
+            <img src="images/direct-access6.jpg"/>
+        </a>
+
+
+        <div class="sliderscroll" style="margin-top: 10px;float: right;">
+            <h3>
+                پر فروش ترین ها
+            </h3>
+            <div class="sliderscroll_content">
+                <div class="sliderscroll_prev">
+                <span class="prev" onclick="sliderScroll('Right',this);">
+
+                </span>
+                </div>
+                <div class="sliderscroll_main">
+                    <ul>
+                        <li>
+                            <a>
+                                <img src="images/sliderscroll_1.jpg" style="padding-top:17px;"/>
+                                <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                                <span class="yekan">
+                                lenovo B580-H-15 inch
+                            </span>
+                                <p calss="yekan price">
+                                    3,200,000 تومان
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="images/scrollslider_2.jpg" style="padding-top:17px;"/>
+                                <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                                <span class="yekan">
+Vivo Sony                             </span>
+                                <p calss="yekan price">
+                                    5,500,000 تومان
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="images/scrollslider_3.jpg" style="padding-top:17px;"/>
+                                <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                                <span class="yekan">
+Acer yumpstam cor                            </span>
+                                <p calss="yekan price">
+                                    4,100,000 تومان
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="images/scrollslider_4.jpg" style="padding-top:17px;"/>
+                                <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                                <span class="yekan">
+Dell latitude Model                            </span>
+                                <p calss="yekan price">
+                                    8,000,000 تومان
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="images/scrollslider_5.jpg" style="padding-top:17px;"/>
+                                <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                                <span class="yekan">
+MSI Gaming Series                            </span>
+                                <p calss="yekan price">
+                                    30,000,000 تومان
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="images/sliderscroll_1.jpg" style="padding-top:17px;"/>
+                                <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                                <span class="yekan">
+                                lenovo B580-H-15 inch
+                            </span>
+                                <p calss="yekan price">
+                                    3,200,000 تومان
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="images/scrollslider_2.jpg" style="padding-top:17px;"/>
+                                <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                                <span class="yekan">
+Vivo Sony                             </span>
+                                <p calss="yekan price">
+                                    5,500,000 تومان
+                                </p>
+                            </a>
+                        <li>
+                            <a>
+                                <img src="images/scrollslider_4.jpg" style="padding-top:17px;"/>
+                                <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                                <span class="yekan">
+Dell latitude Model                            </span>
+                                <p calss="yekan price">
+                                    8,000,000 تومان
+                                </p>
+                            </a>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sliderscroll_next">
+                <span class="next" onclick="sliderScroll('left',this);">
+
+                </span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sliderscroll" style="margin-top: 10px;float: right;">
+            <h3>
+                پریازدید ترین ها
+            </h3>
+            <div class="sliderscroll_content">
+                <div class="sliderscroll_prev">
+                <span class="prev" onclick="sliderScroll('Right',this);">
+
+                </span>
+                </div>
+                <div class="sliderscroll_main">
+                    <ul>
+                        <li>
+                            <a>
+                                <img src="images/sliderscroll2_1.jpg" style="padding-top:17px;"/>
+                                <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                                <span class="yekan">
+                                lenovo B580-H-15 inch
+                            </span>
+                                <p calss="yekan price">
+                                    3,200,000 تومان
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="images/sliderscroll2_2.jpg" style="padding-top:17px;"/>
+                                <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                                <span class="yekan">
+Vivo Sony                             </span>
+                                <p calss="yekan price">
+                                    5,500,000 تومان
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="images/sliderscroll2_3.jpg" style="padding-top:17px;"/>
+                                <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                                <span class="yekan">
+Acer yumpstam cor                            </span>
+                                <p calss="yekan price">
+                                    4,100,000 تومان
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="images/sliderscroll2_4.jpg" style="padding-top:17px;"/>
+                                <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                                <span class="yekan">
+Dell latitude Model                            </span>
+                                <p calss="yekan price">
+                                    8,000,000 تومان
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="images/scrollslider_5.jpg" style="padding-top:17px;"/>
+                                <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                                <span class="yekan">
+MSI Gaming Series                            </span>
+                                <p calss="yekan price">
+                                    30,000,000 تومان
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="images/sliderscroll_1.jpg" style="padding-top:17px;"/>
+                                <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                                <span class="yekan">
+                                lenovo B580-H-15 inch
+                            </span>
+                                <p calss="yekan price">
+                                    3,200,000 تومان
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="images/scrollslider_2.jpg" style="padding-top:17px;"/>
+                                <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                                <span class="yekan">
+Vivo Sony                             </span>
+                                <p calss="yekan price">
+                                    5,500,000 تومان
+                                </p>
+                            </a>
+                        <li>
+                            <a>
+                                <img src="images/scrollslider_4.jpg" style="padding-top:17px;"/>
+                                <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                                <span class="yekan">
+Dell latitude Model                            </span>
+                                <p calss="yekan price">
+                                    8,000,000 تومان
+                                </p>
+                            </a>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sliderscroll_next">
+                <span class="next" onclick="sliderScroll('left',this);">
+
+                </span>
+                </div>
+            </div>
+        </div>
+
+
     </div>
+
 </div>
 <script>
+
+
+    function sliderScroll(direction, tag) {
+        var span_tag = $(tag);
+        var sliderScrollTag = span_tag.parents('.sliderscroll');
+        var sliderScrolUl = sliderScrollTag.find('.sliderscroll_main ul');
+        var sliderScrolItems = sliderScrolUl.find('li');
+        var lengthI = sliderScrolItems.length;
+        var sliderScrolNumbers = Math.ceil(sliderScrolItems.length / 4);
+        var maxNegativeMargin = -(sliderScrolNumbers - 1) * 792;
+        sliderScrolUl.css('width', lengthI * 198);
+        var marginRightOld = sliderScrolUl.css('margin-right');
+        var marginRightOld1 = parseFloat(marginRightOld);
+        var marginRightNew;
+
+        if (direction == 'left') {
+            marginRightNew = marginRightOld1 - 792;
+
+        }
+
+        if (direction == 'Right') {
+            marginRightNew = marginRightOld1 + 792;
+
+        }
+        $('.next').data('disabled', false);
+        $('.prev').data('disabled', false);
+        if (marginRightNew < maxNegativeMargin) {
+            marginRightNew = marginRightOld1;
+            $('.next').data('disabled', true);
+        }
+        if (marginRightNew > 0) {
+            marginRightNew = marginRightOld1;
+            $('.prev').data('disabled', true);
+
+        }
+        sliderScrolUl.animate({'marginRight': marginRightNew}, 1000);
+
+
+    }
+    $('.next').click(function () {
+        if ($(this).data('disabled'))
+            return;
+        sliderScroll('left');
+
+    })
+
+    $('.prev').click(function () {
+        if ($(this).data('disabled'))
+            return;
+        sliderScroll('Right');
+
+    })
+
+
     $('.flipTimer').flipTimer({
         direction: 'down',
         date: 'may 31,2020 22:25:00',
@@ -1352,7 +1765,7 @@
     $('button').click(function () {
         slider();
     });
-//    main slider
+    //    main slider
     var sliderTag2 = $('#slider2');
     var sliderItems2 = sliderTag2.find('.item');
     var numItems2 = sliderItems2.length;
@@ -1374,7 +1787,7 @@
         sliderItems2.eq(nextSlide2 - 1).fadeIn(100);
         sliderNavigators2.removeClass('active');
         sliderNavigators2.eq(nextSlide2 - 1).addClass('active');
-        nextSlide2 ++;
+        nextSlide2++;
     }
     sliderTag2.mouseleave(function () {
         clearInterval(sliderInterval2);
@@ -1397,7 +1810,7 @@
     $('button').click(function () {
         slider2();
     });
-//    slider2
+    //    slider2
     var timer = [];
     $('#menu_top li').hover(function () {
         var tag = $(this)

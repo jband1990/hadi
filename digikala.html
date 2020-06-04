@@ -8,27 +8,27 @@
     </TITLE>
 </HEAD>
 <body>
-<div id="div_test">
-<p onclick="alert('clicked');">ptag1</p>
-<p>ptag2</p>
-<p>ptag3</p>
-    <div id="hadi">jjjjj</div>
-    <span>2541</span>
-    <span>111</span>
-    <div id="child">hadi</div>
-    <button>Stop!</button>
+<style>
+    #div_test{
+        width:100px;
+        height:100px;
+        background-color:#eeeeee;
+    }
+</style>
+<div id="div_test" >
+    <p onclick="test(this)">
+        hadi
+    </p>
 </div>
+
+
 </body>
 
 <script>
- var timer = setInterval(function () {
-    alert('clicksite.ir');},
-    3000);
-
-
-    $('button').click(function () {
-        clearInterval(timer);
-    })
+    function test(tag){
+        var gg = $(tag);
+        gg.parents('#div_test').css('background-color','blue');
+    }
 
 
 </script>
