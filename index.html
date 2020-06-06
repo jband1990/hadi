@@ -1674,7 +1674,7 @@ Dell latitude Model                            </span>
         height: 100%;
         margin-right: 100px;
         float: right;
-        cursor:pointer;
+        cursor: pointer;
     }
 
     .main i {
@@ -1768,57 +1768,66 @@ Dell latitude Model                            </span>
             line-height: 50px;
 
         }
-        #footer_bottom ul{
+
+        #footer_bottom ul {
             padding: 0;
         }
-        #footer_bottom p{
-            font-family:yekan;
+
+        #footer_bottom p {
+            font-family: yekan;
             font-size: 14pt;
             margin-right: 66px;
         }
-        #footer_bottom .email .btn{
+
+        #footer_bottom .email .btn {
             background: #208de6 none repeat scroll 0 0;
             display: block;
             float: left;
             height: 42px;
-            margin-left:0px;
+            margin-left: 0px;
             margin-top: 0;
             width: 110px;
-            box-shadow: 0 2px 3px rgba(0,0,0,.1);
+            box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
             text-align: center;
-            color:#ffffff;
+            color: #ffffff;
             line-height: 37px;
-            font-size:10pt;
+            font-size: 10pt;
             border-radius: 4px;
         }
-        #footer_bottom .email input{
+
+        #footer_bottom .email input {
             width: 514px;
             height: 39px;
-            border:1px solid #ccc;
+            border: 1px solid #ccc;
             font-family: yekan;
             border-radius: 4px;
 
         }
-        #footer_bottom .email{
-            margin-right:66px;
+
+        #footer_bottom .email {
+            margin-right: 66px;
         }
-        #footer_bottom input::placeholder{
+
+        #footer_bottom input::placeholder {
             padding-right: 60px;
 
         }
-        #footer_bottom .social_network{
-            float:left;
+
+        #footer_bottom .social_network {
+            float: left;
             margin-top: 35px;
             width: 100%;
         }
-        .social_network img{
-            float:left;
-            margin-right:8px;
+
+        .social_network img {
+            float: left;
+            margin-right: 8px;
         }
-        .social_icon{
-            float:right;
-            width:40px;
-            height:50px;
+
+        .social_icon {
+            float: right;
+            width: 40px;
+            height: 50px;
             background: url(images/slices.png);
             display: block;
         }
@@ -1862,20 +1871,20 @@ Dell latitude Model                            </span>
                     </li>
                     <li>
                         <a>
-پاسخ به پرسش های متوال                        </a>
+                            پاسخ به پرسش های متوال </a>
                     </li>
                     <li>
                         <a>
-رویه های بازگرداندن کالا                        </a>
+                            رویه های بازگرداندن کالا </a>
                     </li>
                     <li>
                         <a>
-                           شرایط استفاده
+                            شرایط استفاده
                         </a>
                     </li>
                     <li>
                         <a>
-حریم خصوصی                        </a>
+                            حریم خصوصی </a>
                     </li>
                 </ul>
             </div>
@@ -1937,10 +1946,12 @@ Dell latitude Model                            </span>
         if (marginRightNew < maxNegativeMargin) {
             marginRightNew = marginRightOld1;
             $('.next').data('disabled', true);
+            return;
         }
         if (marginRightNew > 0) {
             marginRightNew = marginRightOld1;
             $('.prev').data('disabled', true);
+            return;
 
         }
         sliderScrolUl.animate({'marginRight': marginRightNew}, 1000);
