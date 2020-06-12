@@ -2095,7 +2095,7 @@ Dell latitude Model                            </span>
     //    slider2
     var timer = [];
     $('#menu_top li').hover(function () {
-        var tag = $(this)
+        var tag = $(this);
         var timerAtt = tag.attr('data-time');
         clearTimeout(timer[timerAtt]);
         timer[timerAtt] = setTimeout(function () {
