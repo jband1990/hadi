@@ -8,6 +8,8 @@
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/jquery.flipTimer.js"></script>
     <link href="css/flipTimer.css" rel="stylesheet">
+    <link href="//db.onlinewebfonts.com/c/235b71a9b409e684e865eb4a996e925e?family=IRANYekan" rel="stylesheet"
+          type="text/css"/>
 </head>
 <body style="margin: 0;background-color: rgba(0,0,0,0.16)">
 <style>
@@ -481,9 +483,81 @@
         top: -2px;
         right: 13px;
     }
+
+    #details .right {
+        width: 450px;
+        float: right;
+        height: 100%;
+    }
+
+    #details .share {
+        float: right;
+        width: 100%;
+        padding-top: 15px;
+    }
+
+    #details .addtofavorite {
+        width: 20px;
+        height: 20px;
+        display: block;
+        background: url("images/slices.png") no-repeat -160px -187px;
+    }
+
+    #details .social {
+        width: 20px;
+        height: 20px;
+        display: block;
+        background: url("images/slices.png") no-repeat -213px -187px;
+
+    }
+
+    #details i {
+        float: left;
+        margin-left: 10px;
+    }
+
+    .gallery ul {
+        float: right;
+        padding: 0;
+        width: 100%;
+    }
+
+    .gallery ul li {
+        width: 80px;
+        height: 75px;
+        float: right;
+        text-align: center;
+        border: 1px solid #eee;
+        margin-right: 5px;
+        margin-top: 12px;
+        margin-bottom: 5px;
+
+    }
+
+    .gallery ul li img {
+        padding-top: 5px;
+    }
+
+    .gallery {
+        float: right;
+        width: 100%;
+        text-align: center;
+    }
+
+    .threespot {
+        width: 35px;
+        height: 17px;
+        background: url("images/slices.png") no-repeat -562px -28px;
+        display: block;
+        position: relative;
+        top: 26px;
+        right: 24px;
+    }
 </style>
 
-<div id="main" style="width: 1150px;background-color:#ffffff;margin: 10px auto;">
+<div id="main" style="width: 1150px;margin: 10px auto;height: auto">
+
+
     <div id="offer">
         <span class="discount">
             <span class="right">
@@ -501,6 +575,516 @@
         </div>
     </div>
 
+    <div id="details">
+
+        <div class="right">
+            <div class="share">
+                <i class="addtofavorite"></i>
+                <i class="social"></i>
+            </div>
+            <div class="gallery">
+                <img src="images/product5.jpg"/>
+                <ul>
+                    <li>
+                        <span class="threespot">
+
+                        </span>
+                    </li>
+                    <li><img src="images/product5_1.jpg"/></li>
+                    <li><img src="images/product5_2.jpg"/></li>
+                    <li><img src="images/product5_3.jpg"/></li>
+                    <li><img src="images/product5_4.jpg"/></li>
+
+                </ul>
+            </div>
+        </div>
+        <style>
+            #details {
+                float: right;
+                background-color: #ffffff;
+            }
+
+            .left .title {
+                background-color: #eeeeee;
+                border-radius: 4px;
+                padding: 7px 11px;
+                font-family: yekan;
+                font-size: 14pt;
+                margin-left: 11px;
+                margin-top: 10px;
+
+            }
+
+            .left .title span {
+                font-family: yekan;
+                font-size: 11pt;
+                display: block;
+            }
+
+            #details .left {
+                width: 700px;
+                height: 100%;
+                float: left;
+            }
+
+            .gray {
+                width: 55px;
+                height: 8px;
+                background: url("images/stars.png") repeat 0 -10px;
+                margin-top: 22px;
+                margin-right: 80px;
+                position: relative;
+            }
+
+            .red {
+                width: 55%;
+                height: 9px;
+                background: url("images/stars.png") repeat 0 0;
+                margin-top: 22px;
+                margin: 21px auto;
+                position: absolute;
+                top: -22px;
+                left: 0;
+            }
+
+            .stars {
+                float: left;
+                margin-top: -17px;
+            }
+
+            .stars span {
+                font-size: 8pt;
+                font-family: yekan;
+                padding-right: 76px;
+            }
+
+            #details .left .left {
+                width: 300px;
+                float: left;
+
+            }
+
+            #details .left .right {
+                width: 415px;
+                float: right;
+            }
+
+            #details .left .right p {
+                font-family: yekan;
+                font-size: 9pt;
+            }
+
+            #details .left .right .square {
+                width: 40px;
+                height: 25px;
+                border-radius: 4px;
+                display: block;
+                border: 1px solid #b7b0b0;
+                float: right;
+                margin-left: 5px;
+                padding-right: 36px;
+                font-family: yekan;
+                font-size: 9pt;
+                position: relative;
+                background-color: #f7f7f7;
+
+            }
+
+            #details .left .right .circle {
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                display: block;
+                position: absolute;
+                left: 49px;
+                top: 4px;
+                border: 1px solid #756d6d;
+                cursor: pointer;
+            }
+
+            #details .left .right .circle.active::before {
+                content: " ";
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                top: 2px;
+                right: 4px;
+                background: url("images/slices.png") no-repeat -169px -83px;
+                display: block;
+            }
+        </style>
+        <div class="left">
+            <div class="title">
+                <div class="stars">
+                    <div class="gray">
+                        <div class="red"></div>
+
+                    </div>
+                    <span>
+                            امتیاز 7 از 8
+                        </span>
+                </div>
+                lenovo VIBE shot Dual SIM Mobile Phone
+                <span>
+                    گوشی مویابل لنوو مدل VIBE shot دو سیم کارت
+                </span>
+
+            </div>
+            <div class="left"></div>
+            <div class="right">
+                <p>انتخاب رنگ</p>
+                <span class="square">
+                <span class="circle" style="background-color:white"> </span>
+                    سفید</span>
+                <span class="square">
+                    <span class="circle" style="background-color:black"></span>
+                    مشکی</span>
+                <br/>
+                <p>انتخاب گارانتی</p>
+                <style>
+                    #selector {
+                        width: 390px;
+                        height: 37px;
+                        background-color: #f7f7f7;
+                        border: 1px solid #b7b0b0;
+                        border-radius: 4px;
+                        position: relative;
+                        text-align: center;
+                    }
+
+                    #selector::before {
+                        width: 23px;
+                        height: 23px;
+                        content: " ";
+                        background: url("images/slices.png") no-repeat -138px -79px;
+                        display: block;
+                        top: 8px;
+                        right: 2px;
+                        position: absolute;
+                    }
+
+                    #selector::after {
+                        width: 23px;
+                        height: 17px;
+                        content: " ";
+                        background: url("images/slices.png") no-repeat -31px -461px;
+                        display: block;
+                        top: 14px;
+                        left: 3px;
+                        position: absolute;
+
+                    }
+
+                    #selector .garanti_text {
+                        font-size: 9pt;
+                        font-family: yekan;
+                        line-height: 35px;
+
+                    }
+
+                    #selector ul {
+                        padding: 0;
+                        box-shadow: 0 2px 2px #736c6c;
+                        display: none;
+
+                    }
+
+                    #selector ul li {
+                        padding-right: 20px;
+                        font-family: yekan;
+                        font-size: 10pt;
+                        text-align: center;
+                    }
+
+                    #selector ul li:hover {
+                        background-color: #eeeeee;
+                    }
+                </style>
+                <div id="selector">
+                    <span class="garanti_text">18 ماه گارانتی هما تلکام</span>
+                    <ul>
+                        <li>گارانتی شماره 1</li>
+                        <li>گارانتی شماره 2</li>
+                        <li>گارانتی شماره 3</li>
+                    </ul>
+
+                </div>
+                <style>
+                    #price {
+                        float: right;
+                        width: 100%;
+                        margin-top: 40px;
+                    }
+
+                    #price span {
+                        padding-right: 5px;
+                        font-family: yekan;
+                        color: #535151;
+                        font-size: 10pt;
+                    }
+
+                    .gheymat_adad {
+                        text-decoration: line-through;
+                        font-size: 12pt !important;
+                        color: #000000 !important;
+                    }
+
+                    .hezar {
+                        font-size: 8pt;
+                        color: green;
+                        font-family: yekan;
+                    }
+
+                    .ghey {
+                        color: #005e00;
+                        font-size: 12pt;
+                    }
+
+                    .priceforyou span {
+                        padding-right: 5px;
+                    }
+
+                    .foryou {
+                        font-family: yekan;
+                        font-size: 10pt;
+                    }
+                </style>
+                <div id="price">
+                    <span class="gheymat"> قیمت:</span>
+                    <span class="gheymat_adad">2,500,000</span>
+                    <span class="vahed">تومان</span>
+                </div>
+                <div class="priceforyou">
+                    <span class="foryou">قیمت برای شما:</span>
+                    <span class="ghey">952,000</span>
+                    <span class="hezar"> تومان</span>
+                </div>
+                <style>
+                    #copmpare_add {
+                        float: right;
+                        width: 100%;
+                        height: 30px;
+                        margin-top: 20px;
+                    }
+
+                    #copmpare_add .compare {
+                        background-color: #657c79;
+                        width: 100px;
+                        height: 100%;
+                        float: right;
+                        font-family: yekan;
+                        font-size: 10pt;
+                        text-align: center;
+                        box-shadow: 0 2px 2px rgba(0, 0, 0, .15);
+                        border-radius: 4px;
+                        color: #fff5f5;
+
+                    }
+
+                    #copmpare_add .addtocard {
+                        background-color: green;
+                        width: 180px;
+                        height: 100%;
+                        float: right;
+                        font-family: yekan;
+                        font-size: 10pt;
+                        text-align: center;
+                        box-shadow: 0 2px 2px rgba(0, 0, 0, .15);
+                        border-radius: 4px;
+                        margin-right: 7px;
+                        color: #fff5f5;
+
+                    }
+
+                    #copmpare_add .addtocard i {
+                        width: 33px;
+                        height: 100%;
+                        background-color: #1bba11 !important;
+                        background: url("images/slices.png") no-repeat -153px -415px;
+                        float: right;
+                    }
+
+                    .horizental-line {
+                        height: 1px;
+                        background: #dbd4d4;
+                        float: right;
+                        margin-top: 30px;
+                        width: 98%;
+                    }
+                </style>
+                <div id="copmpare_add">
+                    <span class="compare">مقایسه کن</span>
+                    <span class="addtocard">
+                        افزودن به سبد خرید
+                    <i></i>
+                    </span>
+                </div>
+
+
+            </div>
+            <div class="horizental-line"></div>
+            <style>
+                #services-feature {
+                    background: #fff;
+                    height: 50px;
+                    margin: 5px 0;
+                    width: 700px;
+                    border-radius: 4px;
+                    overflow: hidden;
+                }
+
+                #services-feature ul {
+                    height: 100%;
+                    width: 100%;
+                    padding: 0;
+                }
+
+                #services-feature ul li {
+                    float: right;
+                    height: 100%;
+                    width: 140px;
+                }
+
+                #services-feature ul li a {
+                    line-height: 72px;
+                    vertical-align: 10px;
+                    display: block;
+                    height: 100%;
+                    font-size: 8pt;
+                }
+
+                #services-feature ul li a i {
+                    background: url("images/slices.png") no-repeat;
+                    width: 35px;
+                    height: 24px;
+                    display: inline-block;
+                    margin-top: 22px;
+                    float: right;
+                    margin-left: 7px;
+                }
+
+            </style>
+            <div id="services-feature">
+                <ul>
+                    <li>
+                        <a class="yekan">
+                            <i style="background-position: -210px -473px;">
+
+                            </i>
+                            7 روز ضمانت بازگشت
+                        </a>
+                    </li>
+                    <li>
+                        <a class="yekan">
+                            <i style="background-position: -263px -473px;">
+
+                            </i>
+                            پرداخت در محل </a>
+                    </li>
+                    <li>
+                        <a class="yekan">
+                            <i style="background-position: -157px -473px;">
+
+                            </i>
+                            ضمانت اصل بودن کالا </a>
+                    </li>
+                    <li>
+                        <a class="yekan" style="padding-right: 15px">
+                            <i style="background-position: -316px -473px;">
+
+                            </i>
+                            تحویل اکسپرس </a>
+                    </li>
+                    <li>
+                        <a class="yekan">
+                            <i style="background-position: -103px -473px;">
+
+                            </i>
+                            تضمین بهترین قیمت
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <style>
+        #introduction {
+            background-color: #ffffff;
+            float: right;
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        #introduction .title {
+            font-family: IRANYekan;
+            font-size: 15pt;
+            padding-right: 46px;
+            letter-spacing: -0.6px;
+            color: #6f6f6f;
+
+        }
+
+        #introduction .summery {
+            font-size: 0.9rem;
+            font-family: iranyekan;
+            padding: 25px 49px;
+            color: #404040;
+            line-height: 35px;
+        }
+
+        #introduction.active {
+            height: auto;
+        }
+        #introduction .continue{
+            font-family: yekan;
+            font-size: 10pt;
+        }
+        #introduction .ppp{
+            background-color: #eeeeee;
+            border-radius: 4px;
+            padding: 7px 11px;
+            font-family: yekan;
+            font-size: 14pt;
+            margin-left: 11px;
+            margin-top: 10px;
+        }
+        #introduction .stars{
+            float: right !important;
+            padding-right: 46px;
+            color: #a7a7a7;
+        }
+    </style>
+    <div id="introduction">
+        <p class="title">معرفی اجمالی محصول</p>
+        <div class="stars">lenovo VIBE shot Dual SIM Mobile Phone</div>
+        <p class="summery">در میان محصولاتی که به‌تازگی معرفی شده‌اند، گوشی جدید «هوآوی» مدل «آنر 7X دو سیم‌کارت (Honor
+            7X Dual SIM)‌ «با نمایشگر 5.93‌اینچی، 64 گیگابایت حافظه‌ی داخلی، 4 گیگابایت رم و دو دوربین 16 و 2 مگاپیکسلی
+            در قاب پشت به‌شدت خودنمایی می‌کند. این محصول که 165 گرم وزن دارد، از دو سیم‌کارت در قطع نانو پشتیبانی
+            می‌کند. ضخامت آنر 7X به صورت دقیق 7.6 میلی‌متر است و طول‌ و‌ عرض آن به ترتیب به 156.5 و 75.3 میلی‌متر
+            می‌رسد. برای این محصول، تراشه‌ی اختصاصی هوآوی ((Kirin 659 در ‌نظر گرفته‌ شده است که با دو پردازنده‌ی
+            چهارهسته‌ای در مرکز خود وظیفه‌ی پردازش اطلاعات را بر‌عهده دارد. چهار گیگابایت رم در کنار این مجموعه‌ی
+            سخت‌افزاری قرار‌ گرفته که مقدار بسیار قابل‌توجهی است و می‌تواند در بهبود عملکرد پردازنده نقش بسزایی ایفا
+            کند. صفحه‌نمایش 5.93‌اینچی آنر 7X با وضوح تصویر بالای 1080×2160 یا همان‌FullHD+ ، تراکم پیکسلی 407 پیکسل بر
+            هر اینچ را به تصویر می‌کشد. مانند برخی محصولات جدید هوآوی و سایر برندها، روی قاب پشتی آنر 7X هم دو سنسور 16
+            و 2 مگاپیکسلی قرار دارند که به فلشی از نوع‌ LED‌ مجهز شده‌اند. این دو دوربین در کنار سنسور 8مگاپیکسلی دوربین
+            سلفی امکانات مختلفی مانند قابلیت ثبت موقعیت جغرافیایی عکس‌ها و فیلم‌ها‌(Geo-Tagging) ، قابلیت فوکوس با اشاره
+            روی سوژه‌ (TouchFocus)، قابلیت تشخیص چهره‌(Face Detection) ،‌ قابلیت عکاسی پانوراما‌ (‌Panorama‌)‌ و‌ HDR‌
+            را فراهم آورده‌اند که می‌تواند بسیاری از نیازهای علاقه‌مندان به عکاسی با موبایل را پاسخ‌گو باشد. همان‌طورکه
+            گفته شد، حافظه‌ی داخلی 64‌گیگابایتی در آنر 7X به ‌کار رفته که به‌تنهایی برای کاربرانی که همواره فایل‌های
+            صوتی و تصویری و بازی‌های مختلفی برای ذخیره‌سازی دارند، نسبتا کافی است. باوجوداین، شرکت هوآوی قابلیت پشتیبانی
+            از کارت حافظه‌ی جانبی را هم برای آنر 7X در نظر‌ گرفته است که می‌توان با استفاده از آن، این ظرفیت را تا 256
+            گیگابایت افزایش داد. سیستم‌عامل نسخه‌ی 7.0 اندروید به‌صورت پیش‌فرض در این مدل از گوشی‌های موبایل هوآوی ایفای
+            نقش می‌کند که با مجموعه‌ی کاملی از امکانات یک گوشی اندرویدی مانند‌ MMS، ایمیل، برنامه‌ی ویرایش عکس،
+            سرویس‌های گوگل شامل Google Search‌، Google Maps‌، Gmail‌ و‌ YouTube قابلیت استفاده از سرویس شبکه‌های
+            اجتماعی، قابلیت نمایش اسناد مایکروسافت آفیس، قابلیت نمایش فایل‌های متنی‌ PDF‌ و مرورگر‌ HTML5 تجربه‌ی کاربری
+            بهتری را برای شما ایجاد می‌کند. درنهایت باید بدانید منبع تغذیه در محصول جدید هوآوی یک باتری 3340
+            میلی‌آمپرساعتی از نوع لیتیوم‌یونی است که برای محصولی با این امکانات فنی مناسب به‌ نظر می‌رسد.
+        </p>
+        <p class="continue">ادامه مطلب</p>
+    </div>
+</div>
 
 </div>
 
@@ -812,6 +1396,20 @@
 
 </footer>
 <script>
+    $('#selector').click(function () {
+        $('ul', this).slideToggle(200);
+
+    })
+    $('#selector ul li').click(function () {
+        var txt = $(this).text();
+        $('#selector .garanti_text').text(txt);
+
+    })
+    $('.square').click(function () {
+        $('.circle').removeClass('active');
+        $('.circle', this).addClass('active');
+
+    })
     var timer = [];
     $('#menu_top li').hover(function () {
         var tag = $(this)
