@@ -1015,6 +1015,7 @@
             height: 400px;
             margin-top: 20px;
             overflow: hidden;
+            position: relative;
         }
 
         #introduction .title {
@@ -1037,11 +1038,19 @@
         #introduction.active {
             height: auto;
         }
-        #introduction .continue{
-            font-family: yekan;
-            font-size: 10pt;
+
+        #introduction .read_more {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            padding: 30px 0;
+            background-image: linear-gradient(to bottom, transparent, #575353);
         }
-        #introduction .ppp{
+
+        #introduction .ppp {
             background-color: #eeeeee;
             border-radius: 4px;
             padding: 7px 11px;
@@ -1050,10 +1059,36 @@
             margin-left: 11px;
             margin-top: 10px;
         }
-        #introduction .stars{
+
+        #introduction .stars {
             float: right !important;
             padding-right: 46px;
             color: #a7a7a7;
+        }
+
+        #introduction.active {
+            height: auto;
+        }
+
+        #introduction .button {
+            cursor: pointer;
+            width: 100px;
+            height: 25px;
+            background-color: #9ca3a4;
+            border-top: 1px solid #96d1f8;
+            border-radius: 8px;
+            float: right;
+            position: relative;
+            right: 500px;
+            font-family: yekan;
+            line-height: 21px;
+
+        }
+
+        .button:hover {
+            border-top-color: #161717;
+            background: #28597a;
+            color: #ccc;
         }
     </style>
     <div id="introduction">
@@ -1082,11 +1117,414 @@
             بهتری را برای شما ایجاد می‌کند. درنهایت باید بدانید منبع تغذیه در محصول جدید هوآوی یک باتری 3340
             میلی‌آمپرساعتی از نوع لیتیوم‌یونی است که برای محصولی با این امکانات فنی مناسب به‌ نظر می‌رسد.
         </p>
-        <p class="continue">ادامه مطلب</p>
+        <p class="read_more"><a class="button">ادامه ی مطلب</a></p>
+
+    </div>
+    <style>
+        .sliderscroll {
+            width: 1152px;
+            height: 310px;
+            background-color: #ffffff;
+            margin-top: 20px;
+            border-radius: 4px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .01);
+            overflow: hidden;
+            float: right;
+        }
+
+        .sliderscroll h3 {
+            font-family: yekan;
+            font-size: 12pt;
+            font-weight: normal;
+            background-color: #eeeeee;
+            margin: 0;
+            padding-right: 10px;
+            height: 35px;
+            padding-top: 5px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+            overflow: hidden;
+        }
+
+        .sliderscroll_content {
+            height: 274px;
+        }
+
+        .sliderscroll_prev, .sliderscroll_next {
+            height: 100%;
+            width: 55px;
+            float: right;
+        }
+
+        .sliderscroll_main {
+            width: 1040px;
+            height: 100%;
+            float: right;
+            overflow: hidden;
+        }
+
+        .prev {
+            width: 30px;
+            height: 42px;
+            background: url(images/slices.png) no-repeat;
+            background-position: -852px -677px;
+            display: block;
+            position: relative;
+            top: 107px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        .next {
+            width: 30px;
+            height: 42px;
+            background: url(images/slices.png) no-repeat;
+            background-position: -805px -677px;
+            display: block;
+            position: relative;
+            top: 107px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        .sliderscroll_main ul {
+            padding: 0;
+            height: 100%;
+        }
+
+        .sliderscroll_main ul li {
+            height: 100%;
+            width: 208px;
+            float: right;
+        }
+
+        .sliderscroll_main ul li a {
+            height: 100%;
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+
+        .sliderscroll_main p {
+            text-align: center;
+            margin: 0;
+            color: green;
+            font-size: 13pt;
+        }
+
+        .sliderscroll_main span {
+            text-align: center;
+            display: block;
+        }
+    </style>
+    <div class="sliderscroll">
+        <h3>
+            فقط در دیجیکالا
+        </h3>
+        <div class="sliderscroll_content">
+            <div class="sliderscroll_prev">
+                <span class="prev" onclick="sliderScroll('Right',this);">
+
+                </span>
+            </div>
+            <div class="sliderscroll_main">
+                <ul>
+                    <li>
+                        <a>
+                            <img src="images/sliderscroll_1.jpg" style="padding-top:17px;"/>
+                            <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                            <span class="yekan">
+                                lenovo B580-H-15 inch
+                            </span>
+                            <p calss="yekan price">
+                                3,200,000 تومان
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scrollslider_2.jpg" style="padding-top:17px;"/>
+                            <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                            <span class="yekan">
+Vivo Sony                             </span>
+                            <p calss="yekan price">
+                                5,500,000 تومان
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scrollslider_3.jpg" style="padding-top:17px;"/>
+                            <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                            <span class="yekan">
+Acer yumpstam cor                            </span>
+                            <p calss="yekan price">
+                                4,100,000 تومان
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scrollslider_4.jpg" style="padding-top:17px;"/>
+                            <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                            <span class="yekan">
+Dell latitude Model                            </span>
+                            <p calss="yekan price">
+                                8,000,000 تومان
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scrollslider_5.jpg" style="padding-top:17px;"/>
+                            <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                            <span class="yekan">
+MSI Gaming Series                            </span>
+                            <p calss="yekan price">
+                                30,000,000 تومان
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/sliderscroll_1.jpg" style="padding-top:17px;"/>
+                            <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                            <span class="yekan">
+                                lenovo B580-H-15 inch
+                            </span>
+                            <p calss="yekan price">
+                                3,200,000 تومان
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/scrollslider_2.jpg" style="padding-top:17px;"/>
+                            <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                            <span class="yekan">
+Vivo Sony                             </span>
+                            <p calss="yekan price">
+                                5,500,000 تومان
+                            </p>
+                        </a>
+                    <li>
+                        <a>
+                            <img src="images/scrollslider_4.jpg" style="padding-top:17px;"/>
+                            <img src="images/exclusive-blue.png" style="margin-top: -11px;"/>
+                            <span class="yekan">
+Dell latitude Model                            </span>
+                            <p calss="yekan price">
+                                8,000,000 تومان
+                            </p>
+                        </a>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+            <div class="sliderscroll_next">
+                <span class="next" onclick="sliderScroll('left',this);">
+
+                </span>
+            </div>
+        </div>
+    </div>
+    <style>
+        #tab {
+            padding: 0;
+            width: 100%;
+            height: 50px;
+            background-color: #acacac42;
+            margin-top: 20px;
+            float: right;
+            border: 1px solid #c1c1c1
+
+        }
+
+        #tab li {
+            padding-right: 38px;
+            border-left: 1px solid #a6a3a3;
+            float: right;
+            width: 130px;
+            height: 100%;
+            line-height: 45px;
+            font-family: yekan;
+            font-size: 11pt;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+            cursor: pointer;
+            position: relative;
+            text-align: center;
+        }
+
+        #tab li.active {
+            border-top: 3px solid deepskyblue;
+            background-color: #FFFFFF;
+            box-shadow: 0 -1px 2px rgba(0, 0, 0, .2);
+            color: deepskyblue;
+            border-bottom: none;
+        }
+
+        #tab li::before {
+            background: url("images/slices.png");
+            content: " ";
+            width: 30px;
+            height: 26px;
+            display: block;
+            position: absolute;
+            top: 13px;
+            right: 5px;
+        }
+
+        #tab .naghd::before {
+            background-position: -105px -266px;
+        }
+
+        #tab .fani::before {
+            background-position: -315px -266px;
+        }
+
+        #tab .nazar::before {
+            background-position: -261px -266px;
+        }
+
+        #tab .soal::before {
+            background-position: -210px -266px;
+        }
+
+        #tab .naghd.active::before {
+            background-position: -105px -308px;
+        }
+
+        #tab .fani.active::before {
+            background-position: -315px -308px;
+        }
+
+        #tab .nazar.active::before {
+            background-position: -261px -308px;
+        }
+
+        #tab .soal.active::before {
+            background-position: -210px -308px;
+        }
+    </style>
+    <ul id="tab">
+        <li class="naghd active">نقد و بررسی تخصصی</li>
+        <li class="fani">مشخصات فنی</li>
+        <li class="nazar">نظرات کاربران</li>
+        <li class="soal">پرسش و پاسخ</li>
+    </ul>
+    <style>
+        #tabchildes {
+            width: 100%;
+            float: right;
+            background-color: #FFFFFF;
+        }
+
+        #tabchildes section {
+            font-family: iranyekan;
+            font-size: 10pt;
+            padding: 20px;
+            display: none;
+        }
+
+        #tabchildes h4 {
+            font-size: 10pt;
+            font-family: yekan;
+            position: relative;
+            padding-right:25px;
+        }
+
+        #tabchildes section:first-child {
+            display: block;
+        }
+        #tabchildes .item:first-child h4 i{
+            background:url("images/slices.png") no-repeat -153px -615px;
+            width: 34px;
+            height:44px;
+            display: block;
+            position: absolute;
+            right:-19px;
+            top:-5px;
+
+        }
+        #tabchildes .item:last-child h4 i{
+            background:url("images/slices.png") no-repeat -313px -615px;
+            width: 34px;
+            height:44px;
+            display: block;
+            position: absolute;
+            right:-20px;
+            top:2px;
+
+        }
+        #tabchildes .item h4 i{
+            background:url("images/slices.png") no-repeat -259px -606px;
+            width: 34px;
+            height:55px;
+            display: block;
+            position: absolute;
+            right:-20px;
+            top:-12px;
+
+        }
+        #tabchildes .item{
+            line-height: 40px;
+        }
+        .itemcontainer{
+            border-right:3px solid #f0f1f2;
+        }
+    </style>
+    <div id="tabchildes">
+        <section>
+            <div class="itemcontainer">
+
+            <div class="item">
+                <h4>
+                    طراحی و ساخت
+                    <p>item1</p>
+                    <p>item1</p>
+                    <p>item1</p>
+                    <i></i>
+
+                </h4>
+            </div>
+            <div class="item">
+                <h4>
+                    <i></i>
+                    صفحه ی نمایش
+                </h4>
+            </div>
+            <div class="item">
+                <h4>
+                    <i></i>
+                    سخت افزار و باتری
+                </h4>
+            </div>
+            </div>
+        </section>
+
+        <section>
+            تب 2
+        </section>
+        <section>
+            تب 3
+        </section>
+        <section>
+            تب 4
+        </section>
     </div>
 </div>
 
 </div>
+<script>
+    $('#tab li').click(function () {
+        $('#tab li').removeClass('active');
+        $('#tabchildes section').fadeOut(5);
+        var index = $(this).index();
+        $('#tabchildes section').eq(index).fadeIn(200);
+        $(this).addClass('active');
+
+
+    })
+</script>
 
 <style>
     .page_navigator {
@@ -1396,6 +1834,49 @@
 
 </footer>
 <script>
+    function sliderScroll(direction, tag) {
+        var span_tag = $(tag);
+        var sliderScrollTag = span_tag.parents('.sliderscroll');
+        var sliderScrolUl = sliderScrollTag.find('.sliderscroll_main ul');
+        var sliderScrolItems = sliderScrolUl.find('li');
+        var lengthI = sliderScrolItems.length;
+        var sliderScrolNumbers = Math.ceil(sliderScrolItems.length / 5);
+        var maxNegativeMargin = -(sliderScrolNumbers - 1) * 1040;
+        sliderScrolUl.css('width', lengthI * 208);
+        var marginRightOld = sliderScrolUl.css('margin-right');
+        var marginRightOld1 = parseFloat(marginRightOld);
+        var marginRightNew;
+
+        if (direction == 'left') {
+            marginRightNew = marginRightOld1 - 1040;
+
+        }
+
+        if (direction == 'Right') {
+            marginRightNew = marginRightOld1 + 1040;
+
+        }
+        $('.next').data('disabled', false);
+        $('.prev').data('disabled', false);
+        if (marginRightNew < maxNegativeMargin) {
+            marginRightNew = marginRightOld1;
+            $('.next').data('disabled', true);
+            return;
+        }
+        if (marginRightNew > 0) {
+            marginRightNew = marginRightOld1;
+            $('.prev').data('disabled', true);
+            return;
+
+        }
+        sliderScrolUl.animate({'marginRight': marginRightNew}, 1000);
+
+
+    }
+    $('#introduction .read_more').click(function () {
+        $('#introduction').toggleClass('active');
+
+    })
     $('#selector').click(function () {
         $('ul', this).slideToggle(200);
 
