@@ -1423,89 +1423,734 @@ Dell latitude Model                            </span>
             font-size: 10pt;
             padding: 20px;
             display: none;
+            float: right;
+            width: 100%;
         }
 
         #tabchildes h4 {
             font-size: 10pt;
             font-family: yekan;
             position: relative;
-            padding-right:25px;
+            padding-right: 25px;
+            cursor: pointer;
+        }
+
+        #tabchildes h4 span {
+            z-index: 1;
+            position: relative;
+            background: white;
+            font-family: iranyekan;
+        }
+
+        #tabchildes h4::after {
+            width: 100%;
+            height: 1px;
+            background: #eee;
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 22px;
+            left: 0;
         }
 
         #tabchildes section:first-child {
             display: block;
         }
-        #tabchildes .item:first-child h4 i{
-            background:url("images/slices.png") no-repeat -153px -615px;
+
+        #tabchildes .item:first-child h4.active i {
+            background: url("images/slices.png") no-repeat -99px -615px;
             width: 34px;
-            height:44px;
+            height: 44px;
             display: block;
             position: absolute;
-            right:-19px;
-            top:-5px;
+            right: -19px;
+            top: -5px;
 
         }
-        #tabchildes .item:last-child h4 i{
-            background:url("images/slices.png") no-repeat -313px -615px;
+
+        #tabchildes .item:first-child h4 i {
+            background: url("images/slices.png") no-repeat -153px -615px;
             width: 34px;
-            height:44px;
+            height: 44px;
             display: block;
             position: absolute;
-            right:-20px;
-            top:2px;
+            right: -19px;
+            top: -5px;
 
         }
-        #tabchildes .item h4 i{
-            background:url("images/slices.png") no-repeat -259px -606px;
+
+        #tabchildes .item:last-child h4 i {
+            background: url("images/slices.png") no-repeat -313px -615px;
             width: 34px;
-            height:55px;
+            height: 44px;
             display: block;
             position: absolute;
-            right:-20px;
-            top:-12px;
+            right: -20px;
+            top: 2px;
 
         }
-        #tabchildes .item{
+
+        #tabchildes .item h4 i {
+            background: url("images/slices.png") no-repeat -259px -606px;
+            width: 34px;
+            height: 55px;
+            display: block;
+            position: absolute;
+            right: -20px;
+            top: -12px;
+
+        }
+
+        #tabchildes .item h4.active i {
+            background: url("images/slices.png") no-repeat -207px -606px;
+            width: 34px;
+            height: 55px;
+            display: block;
+            position: absolute;
+            right: -20px;
+            top: -12px;
+
+        }
+
+        #tabchildes .item:last-child h4.active i {
+            background: url("images/slices.png") no-repeat -207px -606px;
+            width: 34px;
+            height: 55px;
+            display: block;
+            position: absolute;
+            right: -20px;
+            top: -12px;
+
+        }
+
+        #tabchildes .item {
             line-height: 40px;
+            font-family: iranyekan;
+            font-size: 9pt;
         }
-        .itemcontainer{
-            border-right:3px solid #f0f1f2;
+
+        .itemcontainer {
+            border-right: 3px solid #f0f1f2;
+        }
+
+        #tabchildes .itemcontainer span:nth-child(1) {
+            top: -6px;
+        }
+
+        #tabchildes .itemcontainer span:nth-child(3) {
+            top: -6px;
+        }
+
+        #tabchildes .itemcontainer span:nth-last-child(1) {
+            top: -6px;
+        }
+
+        #tabchildes .itemcontainer .description {
+            display: none;
         }
     </style>
     <div id="tabchildes">
         <section>
             <div class="itemcontainer">
 
-            <div class="item">
-                <h4>
-                    طراحی و ساخت
-                    <p>item1</p>
-                    <p>item1</p>
-                    <p>item1</p>
-                    <i></i>
+                <div class="item">
+                    <h4>
+                    <span>
+                        طراحی و ساخت
+                   </span>
+                        <i></i>
+                    </h4>
+                    <div class="description">
+                        <p>
+                            توضیحات طراحی و ساخت
+                        </p>
+                        <p>
+                            توضیحات طراحی و ساخت
+                        </p>
 
-                </h4>
-            </div>
-            <div class="item">
-                <h4>
-                    <i></i>
-                    صفحه ی نمایش
-                </h4>
-            </div>
-            <div class="item">
-                <h4>
-                    <i></i>
-                    سخت افزار و باتری
-                </h4>
-            </div>
+                        <p>
+                            توضیحات طراحی و ساخت
+                        </p>
+                        <p>
+                            توضیحات طراحی و ساخت
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <h4>
+                        <i></i>
+                        <span>
+                       صفحه ی نمایش
+                    </span>
+                    </h4>
+                    <div class="description">
+                        <p>
+                            توضیحات طراحی و ساخت
+                        </p>
+                        <p>
+                            توضیحات طراحی و ساخت
+                        </p>
+
+                        <p>
+                            توضیحات طراحی و ساخت
+                        </p>
+                        <p>
+                            توضیحات طراحی و ساخت
+                        </p>
+                    </div>
+
+
+                </div>
+                <div class="item">
+                    <h4>
+                        <i></i>
+                        <span>
+                        سخت افزار و باتری
+                    </span>
+                    </h4>
+                    <div class="description">
+                        <p>
+                            توضیحات طراحی و ساخت
+                        </p>
+                        <p>
+                            توضیحات طراحی و ساخت
+                        </p>
+                        <p>
+                            توضیحات طراحی و ساخت
+                        </p>
+                        <p>
+                            توضیحات طراحی و ساخت
+                        </p>
+                    </div>
+
+
+                </div>
             </div>
         </section>
+        <style>
+            .section_fani {
+                float: right;
+                width: 100%
+            }
 
-        <section>
-            تب 2
+            .section_fani span {
+                font-size: 12pt;
+                font-family: yekan;
+            }
+
+            .section_fani .right {
+                width: 225px;
+                border-radius: 4px;
+                background: #efefef;
+                float: right;
+                font-size: 10pt;
+                font-family: iranyekan;
+                padding-right: 18px;
+                margin-left: 12px;
+                height: 35px;
+                line-height: 33px;
+            }
+
+            .section_fani .left {
+                width: 840px;
+                border-radius: 4px;
+                background: #f4f6f7;
+                font-size: 10pt;
+                font-family: iranyekan;
+                float: left;
+                margin-left: 32px;
+                padding-right: 20px;
+                height: 35px;
+                line-height: 33px;
+            }
+
+            .section_fani .row {
+                margin-top: 15px;
+                float: right;
+            }
+        </style>
+
+        <section class="section_fani">
+            <span>
+                مشخصات فیزیکی
+
+            </span>
+            <div class="row">
+                <div class="right">
+                    ابعاد
+                </div>
+                <div class="left">
+                    35 میلی متر *185 میلی متر
+                </div>
+            </div>
+            <div class="row">
+                <div class="right">
+                    وزن
+                </div>
+                <div class="left">
+
+                    150گرم
+                </div>
+            </div>
+            <div class="row">
+                <div class="right">
+                    قابلیت پشتیبانی از سیم کارت
+                </div>
+                <div class="left">
+
+                    ندارد
+                </div>
+
+            </div>
         </section>
+        <style>
+            #comments_result {
+                width: 510px;
+                float: right;
+
+            }
+
+            #comments_send {
+                width: 630px;
+                float: left;
+            }
+
+            .navbar .point {
+                font-family: yekan;
+                font-size: 10pt;
+            }
+
+            .navbar .model {
+                font-family: yekan;
+                font-size: 8pt;
+                margin-right: 10px;
+            }
+
+            .navbar .row ul {
+                padding: 0;
+                height: 10px;
+                float: right;
+                margin-top: 14px;
+            }
+
+            .navbar .row ul li {
+                height: 100%;
+                width: 50px;
+                float: right;
+                background: #eee;
+                border-left: 1px solid #ffffff;
+
+            }
+
+            .navbar .title {
+                float: right;
+                font-size: 9pt;
+                width: 130px;
+            }
+
+            .navbar ul li span {
+                height: 100%;
+                width: 50px;
+                float: right;
+                background: darkgreen;
+
+            }
+
+            .navbar ul li span.full {
+                width: 20%;
+
+            }
+
+            .navbar .row {
+                float: right;
+                width: 100%;
+                margin-bottom: -15px;
+            }
+
+            .opinion .btn {
+                background: #208de6 none repeat scroll 0 0;
+                display: block;
+                float: left;
+                height: 42px;
+                width: 110px;
+                box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+                text-align: center;
+                color: #ffffff;
+                line-height: 37px;
+                font-size: 10pt;
+                border-radius: 4px;
+                margin-left: 33px;
+            }
+
+        </style>
         <section>
-            تب 3
+            <div id="comments_result" class="navbar">
+                <p class="point">
+                    امتیاز کابران به:
+                    <span class="model">
+
+                        گوشی سامسونگ مدل HUAWEI XPERIMA
+
+                    </span>
+                </p>
+                <div class="row">
+                    <p class="title">ارزش خرید به نسبت قیمت</p>
+                    <ul>
+                        <li>
+                            <span>
+
+                            </span>
+                        </li>
+                        <li>
+                            <span class="full">
+
+                            </span>
+                        </li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <p class="title">نوآوری</p>
+                    <ul>
+                        <li>
+                            <span>
+
+                            </span>
+                        </li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+
+                </div>
+                <div class="row">
+                    <p class="title">طراحی و ظاهر</p>
+                    <ul>
+                        <li>
+                            <span>
+
+                            </span>
+                        </li>
+                        <li>
+                            <span class="full">
+
+                            </span>
+                        </li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div id="comments_send">
+                <p style="font-size:11pt;font-family:yekan;">
+                    شما هم می توانید نظرات خود را ارسال کنید
+                </p>
+                <p style="font-size:10pt;font-family:yekan;">
+                    برای ثبت نظرات و نقد و بررسی لارم است شما ابتدا وارد سایت شوید.
+                    اگر این محصول را قبلا از دیجیکالا خریداری کرده باشید،نظر شما به عنوان مالک محصول ثبت خواهد شد
+                </p>
+                <div class="opinion" style="text-align: left">
+                    <span class="btn">ارسال نظرات</span>
+                </div>
+            </div>
+            <style>
+                #comments {
+                    float: right;
+                }
+
+                .horizental-line1 {
+                    height: 1px;
+                    background: #dbd4d4;
+                    float: right;
+                    width: 1100px;
+                }
+
+                #comments .comment .comment_header {
+                    width: 100%;
+                    background: #e8e8e8;;
+                    height: 55px;
+                    margin-top: 15px;
+                    padding: 0 15px;
+                    border-radius: 2px;
+                    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+                    overflow: hidden;
+                }
+
+                #comments .comment {
+                    float: right;
+                    width: 94%;
+                    margin-bottom: 10px;
+                }
+
+                #comments .comment_header .name {
+                    font-size: 10pt;
+                    font-family: yekan;
+                    display: block;
+                }
+
+                #comments .comment_header .date {
+                    font-size: 10pt;
+                    font-family: yekan;
+                    display: block;
+                }
+
+                #comments .comment .left .agree {
+                    float: left;
+                    display: block;
+                    font-size: 10.5pt;
+                    font-family: yekan;
+                    margin-right: 10px;
+                }
+
+                #comments .comment .left {
+                    float: left;
+                    padding-top: 17px;
+                }
+
+                #comments .comment .right {
+                    float: right;
+                }
+
+                #comments .comment .left .like {
+                    width: 65px;
+                    height: 25px;
+                    background: #ffffff;
+                    float: left;
+                    margin-right: 10px;
+                    border-radius: 2px;
+                }
+
+                #comments .comment .left .like i {
+                    width: 20px;
+                    height: 20px;
+                    background: url("images/slices.png") no-repeat -305px -190px;
+                    display: block;
+                    float: right;
+                    margin-top: 5px;
+                }
+
+                #comments .comment .left .dislike {
+                    width: 65px;
+                    height: 25px;
+                    background: #ffffff;
+                    float: left;
+                    margin-right: 10px;
+                    border-radius: 2px;
+
+                }
+
+                #comments .comment .left .dislike i {
+                    width: 20px;
+                    height: 20px;
+                    background: url("images/slices.png") no-repeat -267px -193px;
+                    display: block;
+                    float: right;
+                    margin-top: 5px;
+                }
+
+                #comments .comment .left .dislike span {
+                    margin-left: 5px;
+                    float: left;
+                    padding-top: 5px;
+                }
+
+                #comments .comment .left .like span {
+                    margin-left: 5px;
+                    float: left;
+                    padding-top: 5px;
+                }
+            </style>
+            <div id="comments">
+                <p style="font-size: 13pt;font-family: yekan">نظرات کاربران</p>
+                <span class="horizental-line1"></span>
+                <div class="comment">
+                    <div class="comment_header">
+                        <div class="right">
+                            <span class="name">هادی محمودی</span>
+                            <span class="date">8 آبان 1369</span>
+                        </div>
+                        <div class="left">
+                            <span class="like">
+                                <i></i>
+                                <span>
+                                    10
+                                </span>
+                            </span>
+                            <span class="dislike">
+                                <i></i>
+                                <span>
+                                    20
+                                </span>
+                            </span>
+                            <span class="agree">
+                                آیا موافق این نظر بوده اید؟
+                            </span>
+                        </div>
+                    </div>
+                    <style>
+                        #comments .comment_content .right {
+                            float: right;
+                            width: 400px;
+                        }
+                    </style>
+                    <div class="comment_content">
+                        <div class="right">
+                            <div class="navbar">
+                                <div class="row">
+                                    <p class="title">نوآوری</p>
+                                    <ul>
+                                        <li>
+                            <span>
+                            </span>
+                                        </li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="navbar">
+                                <div class="row">
+                                    <p class="title">نوآوری</p>
+                                    <ul>
+                                        <li>
+                            <span>
+                            </span>
+                                        </li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="navbar">
+                                <div class="row">
+                                    <p class="title">نوآوری</p>
+                                    <ul>
+                                        <li>
+                            <span>
+                            </span>
+                                        </li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="navbar">
+                                <div class="row">
+                                    <p class="title">نوآوری</p>
+                                    <ul>
+                                        <li>
+                            <span>
+                            </span>
+                                        </li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="navbar">
+                                <div class="row">
+                                    <p class="title">نوآوری</p>
+                                    <ul>
+                                        <li>
+                            <span>
+                            </span>
+                                        </li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <style>
+                            #comments .comment .comment_content .left {
+                                width: 580px;
+                                float: left;
+                            }
+
+                            #comments .comment .comment_content .left .top {
+                                font-family: yekan;
+                                font-size: 12pt;
+                                width: 100%;
+                            }
+
+                            #comments .comment .comment_content .left .center {
+                                float: left;
+                            }
+
+                            #comments .comment .comment_content .left .bottom {
+                                font-size: 10pt;
+                                font-family: yekan;
+                                float: right;
+                                width:100%;
+
+                            }
+
+                            .ghovat {
+                                float: right;
+                                font-family: yekan;
+                                font-size: 10pt;
+                                width:280px;
+                            }
+
+                            .zaaf {
+                                float: right;
+                                font-family: yekan;
+                                font-size: 10pt;
+                                width:280px;
+                                margin-right: 20px;
+                            }
+                            .ghovat p{
+                                color:green;
+                            }
+                            .zaaf p{
+                                color:red;
+                            }
+                        </style>
+                        <div class="left">
+                            <div class="top">
+                                حیف که دوسیم کارته نیست!!!!!!!!!!
+                            </div>
+                            <div class="center">
+                                <div class="ghovat">
+                                    <p>
+                                        نقاط قوت
+                                    </p>
+                                    <p>
+                                        دوربین 25 مگاپیکسلی-صدای خوب-کیفیت عالی
+                                    </p>
+                                </div>
+                                <div class="zaaf">
+                                    <p>
+                                        نقاط ضعف
+                                    </p>
+                                    <p>
+                                        قیمت بالا
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                از لحافظ کیفیت و صفحه نمایش خیلی افتضاح است
+                                از نظر ظاهر بسیار جذاب است و در صورت امکان خیلی خوب است.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section>
             تب 4
@@ -1515,6 +2160,13 @@ Dell latitude Model                            </span>
 
 </div>
 <script>
+    $('.itemcontainer .item h4').click(function () {
+        var item = $(this).parents('.item');
+        $(this).toggleClass('active');
+
+        $('.description', item).slideToggle(200);
+
+    })
     $('#tab li').click(function () {
         $('#tab li').removeClass('active');
         $('#tabchildes section').fadeOut(5);
@@ -1696,13 +2348,11 @@ Dell latitude Model                            </span>
             margin-right: 66px;
         }
 
-        #footer_bottom .email .btn {
+        .email .btn {
             background: #208de6 none repeat scroll 0 0;
             display: block;
             float: left;
             height: 42px;
-            margin-left: 0px;
-            margin-top: 0;
             width: 110px;
             box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
             text-align: center;
