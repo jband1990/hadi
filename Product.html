@@ -6,6 +6,7 @@
         فروشگاه اینترنتی دیجیکالا
     </title>
     <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery.elevatezoom.js"></script>
     <script src="js/jquery.flipTimer.js"></script>
     <link href="css/flipTimer.css" rel="stylesheet">
     <link href="//db.onlinewebfonts.com/c/235b71a9b409e684e865eb4a996e925e?family=IRANYekan" rel="stylesheet"
@@ -583,7 +584,13 @@
                 <i class="social"></i>
             </div>
             <div class="gallery">
-                <img src="images/product5.jpg"/>
+                <img id="zoomproduct" src="images/products/1/gallery/small/1472662586.jpg"
+                     data-zoom-image="images/products/1/gallery/large/1472662586.jpg"/>
+
+                <script>
+                    $('#zoomproduct').elevateZoom({'zoomWindowOffetx': -250, 'scrolZoom': true});
+                </script>
+
                 <ul>
                     <li>
                         <span class="threespot">
@@ -2096,7 +2103,7 @@ Dell latitude Model                            </span>
                                 font-size: 10pt;
                                 font-family: yekan;
                                 float: right;
-                                width:100%;
+                                width: 100%;
 
                             }
 
@@ -2104,21 +2111,23 @@ Dell latitude Model                            </span>
                                 float: right;
                                 font-family: yekan;
                                 font-size: 10pt;
-                                width:280px;
+                                width: 280px;
                             }
 
                             .zaaf {
                                 float: right;
                                 font-family: yekan;
                                 font-size: 10pt;
-                                width:280px;
+                                width: 280px;
                                 margin-right: 20px;
                             }
-                            .ghovat p{
-                                color:green;
+
+                            .ghovat p {
+                                color: green;
                             }
-                            .zaaf p{
-                                color:red;
+
+                            .zaaf p {
+                                color: red;
                             }
                         </style>
                         <div class="left">
@@ -2152,8 +2161,166 @@ Dell latitude Model                            </span>
                 </div>
             </div>
         </section>
-        <section>
-            تب 4
+        <style>
+            #questions {
+                font-family: yekan;
+            }
+
+            #questions span {
+                font-size: 11pt;
+                font-family: yekan;
+            }
+
+            #questions .question_matn {
+                width: 97%;
+                height: 200px;
+            }
+
+            .email1 .btn1 {
+                background: #208de6 none repeat scroll 0 0;
+                display: block;
+                float: left;
+                height: 42px;
+                width: 110px;
+                box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+                text-align: center;
+                color: #ffffff;
+                line-height: 37px;
+                font-size: 10pt;
+                border-radius: 4px;
+                margin-left: 24px;
+                margin-top: 15px;
+            }
+
+            #questions .question_container {
+                float: right;
+                width: 100%;
+            }
+
+            #questions .question_header {
+                height: 35px;
+                float: right;
+                background: #eee;
+                width: 97%;
+                margin-top: 10px;
+            }
+
+            #questions .question_content {
+                height: auto;
+                float: right;
+                background: #cfd2d2;
+                width: 97%;
+            }
+
+            #questions .question {
+                float: right;
+                width: 100%;
+                box-shadow: 0 2px 3px rgba(0, 0, 0, .15);
+                border-radius: 3px;
+                margin-bottom: 7px;
+                overflow: hidden;
+            }
+
+            #questions .question_header i {
+                width: 24px;
+                height: 24px;
+                background: url("images/slices.png") no-repeat -284px -126px;
+                margin-top: 5px;
+                float: right;
+                display: block;
+                margin-left: 10px;
+            }
+
+            #questions .question_header .title {
+                font-family: yekan;
+                float: right;
+            }
+
+            #questions .question_header .name {
+                float: left;
+                margin-right: 5px;
+                font-family: yekan;
+                font-size: 9pt;
+                margin-top: 5px;
+                padding-left: 10px;
+            }
+
+            #questions .question_header .date {
+                float: left;
+                margin-right: 5px;
+                font-family: yekan;
+                font-size: 9pt;
+                margin-top: 5px;
+            }
+
+            #questions .question_content p {
+                font-size: 10pt;
+                font-family: yekan;
+                height: auto;
+                padding-right: 5px;
+            }
+        </style>
+        <section id="questions">
+            <span>
+                پرسش خود را مطرح نمایید
+            </span>
+            <textarea class="question_matn">
+            </textarea>
+            <div class="email1">
+                <span class="btn1">ثبت پرسش</span>
+            </div>
+            <div class="horizental-line"></div>
+            <div class="question_container">
+                <div class="question">
+                    <div class="question_header">
+                        <i></i>
+                        <span class="title">
+پرسش
+                        </span>
+                        <span class="name">
+هادی محمودی
+
+                       </span>
+                        <span class="date">
+مرداد ماه 1399 ساعت 12 شب -
+                        </span>
+                    </div>
+                    <div class="question_content">
+                        <p>
+                            ر میان محصولاتی که به‌تازگی معرفی شده‌اند، گوشی جدید «هوآوی» مدل «آنر 7X دو سیم‌کارت (Honor
+                            7X Dual SIM)‌ «با نمایشگر 5.93‌اینچی، 64 گیگابایت حافظه‌ی داخلی، 4 گیگابایت رم و دو دوربین
+                            16 و 2 مگاپیکسلی در قاب پشت به‌شدت خودنمایی می‌کند. این محصول که 165 گرم وزن دارد، از دو
+                            سیم‌کارت در قطع نانو پشتیبانی می‌کند. ضخامت آنر 7X به صورت دقیق 7.6 میلی‌متر است و طول‌ و‌
+                            عرض آن به ترتیب
+                        </p>
+                    </div>
+                </div>
+                <div class="question_container">
+                    <div class="question">
+                        <div class="question_header">
+                            <i></i>
+                            <span class="title">
+پرسش
+                        </span>
+                            <span class="name">
+هادی محمودی
+                       </span>
+                            <span class="date">
+مرداد ماه 1399 ساعت 12 شب -
+                        </span>
+                        </div>
+                        <div class="question_content">
+                            <p>
+                                ر میان محصولاتی که به‌تازگی معرفی شده‌اند، گوشی جدید «هوآوی» مدل «آنر 7X دو سیم‌کارت
+                                (Honor 7X Dual SIM)‌ «با نمایشگر 5.93‌اینچی، 64 گیگابایت حافظه‌ی داخلی، 4 گیگابایت رم و
+                                دو دوربین 16 و 2 مگاپیکسلی در قاب پشت به‌شدت خودنمایی می‌کند. این محصول که 165 گرم وزن
+                                دارد، از دو سیم‌کارت در قطع نانو پشتیبانی می‌کند. ضخامت آنر 7X به صورت دقیق 7.6 میلی‌متر
+                                است و طول‌ و‌ عرض آن به ترتیب
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
 </div>
@@ -2581,5 +2748,132 @@ Dell latitude Model                            </span>
         }
     });
 </script>
+<style>
+    #product_gallery {
+        width: 900px;
+        height: 600px;
+        left: 0;
+        right: 0;
+        top: 10px;
+        position: fixed;
+        background: #ffff;
+        z-index: 6;
+        margin: auto;
+    }
+
+    #dark {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 5;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    #product_gallery .matn_gallery {
+        font-size: 10pt;
+        font-family: yekan;
+        background: #eee;
+        width: 890px;
+        height: 40px;
+        display: block;
+        position: relative;
+        line-height: 40px;
+        padding: 5px;
+    }
+
+    #product_gallery .close {
+        width: 28px;
+        height: 28px;
+        background: url("images/slices.png") no-repeat -134px -123px;
+        position: absolute;
+        top: 10px;
+        left: 8px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 100%;
+    }
+
+    #product_gallery .right {
+        width: 700px;
+        float: right;
+        height: 548px;
+    }
+
+    #product_gallery .right img {
+        max-height: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    #product_gallery .left {
+        width: 197px;
+        float: left;
+        border-right: 2px solid #ccc;
+        overflow-y: auto;
+    }
+
+    #product_gallery .left ul {
+        padding: 0;
+        width: 100%;
+        height: 548px;
+    }
+
+    #product_gallery .left li {
+        width: 100%;
+        border-bottom: 1px solid #cccccc;
+        text-align: center;
+    }
+
+    #product_gallery .left li img {
+        max-height: 100%;
+        max-width: 100%;
+
+    }
+
+</style>
+<div id="product_gallery">
+<span class="matn_gallery">
+    گوشی SAMSUNG مدل K15240 با حافظه ی 132 مگابایت
+    <span class="close"></span>
+</span>
+    <div class="right">
+        <img src="images/products/8/gallery/large/ax1.jpg"/>
+    </div>
+    <div class="left">
+        <ul>
+            <li>
+                <img src="images/products/8/gallery/small/ax1.jpg"/>
+            </li>
+            <li>
+                <img src="images/products/8/gallery/small/ax1.jpg"/>
+            </li>
+            <li>
+                <img src="images/products/8/gallery/small/ax1.jpg"/>
+            </li>
+            <li>
+                <img src="images/products/8/gallery/small/ax1.jpg"/>
+            </li>
+            <li>
+                <img src="images/products/8/gallery/small/ax1.jpg"/>
+            </li>
+            <li>
+                <img src="images/products/8/gallery/small/ax1.jpg"/>
+            </li>
+            <li>
+                <img src="images/products/8/gallery/small/ax1.jpg"/>
+            </li>
+            <li>
+                <img src="images/products/8/gallery/small/ax1.jpg"/>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="dark">
+
+</div>
 </body>
 </html>
