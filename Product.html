@@ -11,6 +11,9 @@
     <link href="css/flipTimer.css" rel="stylesheet">
     <link href="//db.onlinewebfonts.com/c/235b71a9b409e684e865eb4a996e925e?family=IRANYekan" rel="stylesheet"
           type="text/css"/>
+    <script src="js/scrollbar/jquery.mCustomScrollbar.js"></script>
+    <script src="js/scrollbar/jquery.mousewheel.js"></script>
+    <link href="js/scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet"/>
 </head>
 <body style="margin: 0;background-color: rgba(0,0,0,0.16)">
 <style>
@@ -2873,7 +2876,71 @@ Dell latitude Model                            </span>
     </div>
 </div>
 <div id="dark">
-
 </div>
+<script>
+    console.log('kun hamed');
+    $("#product_gallery .left").mCustomScrollbar({
+        setWidth: false,
+        setHeight: 300,
+        setTop: 0,
+        setLeft: 0,
+        axis: "y",
+        scrollbarPosition: "inside",
+        scrollInertia: 950,
+        autoDraggerLength: true,
+        autoHideScrollbar: false,
+        autoExpandScrollbar: false,
+        alwaysShowScrollbar: 0,
+        snapAmount: null,
+        snapOffset: 0,
+        mousewheel: {
+            enable: true,
+            scrollAmount: "auto",
+            axis: "y",
+            preventDefault: false,
+            deltaFactor: "auto",
+            normalizeDelta: false,
+            invert: false,
+            disableOver: ["select", "option", "keygen", "datalist", "textarea"]
+        },
+        scrollButtons: {
+            enable: true,
+            scrollType: "stepless",
+            scrollAmount: "auto"
+        },
+        keyboard: {
+            enable: true,
+            scrollType: "stepLess",
+            scrollAmount: "auto",
+        },
+        contentTouchScroll: 25,
+        advanced:{
+            autoExpandHorizentalScroll: false,
+            autoScrollOnFocus: "input,textarea,select,button,datalist,keygen,a[tabindex],area,object,[contenteditable='true']",
+            updateOnContentResize: true,
+            updateOnImageLoad: true,
+            updateOnSelectorChange: false,
+            releaseDraggableSelectors: false,
+        },
+        theme: "dark-thick",
+        callbacks: {
+            inInit: false,
+            onScrollStart: false,
+            onScroll: false,
+            onTotalScroll: false,
+            onTotalScrollBack: false,
+            whileScrolling: false,
+            onTotallScrollOffset: 0,
+            onTotallScrollBackOffset: 0,
+            alwaysTriggerOffsets: true,
+            onOverflowY: false,
+            onOverflowX: false,
+            onOverflowYNone: false,
+            onOverflowXNone: false,
+        },
+        live: false,
+        liveSelector: null
+    });
+</script>
 </body>
 </html>
