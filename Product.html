@@ -535,6 +535,7 @@
         margin-right: 5px;
         margin-top: 12px;
         margin-bottom: 5px;
+        cursor: pointer;
 
     }
 
@@ -600,8 +601,10 @@
 
                         </span>
                     </li>
-                    <li><img src="images/product5_1.jpg"/></li>
-                    <li><img src="images/product5_2.jpg"/></li>
+                    <li data-main-image="images/products/8/gallery/large/ax1.jpg"><img src="images/product5_1.jpg"/>
+                    </li>
+                    <li data-main-image="images/products/8/gallery/large/ax2.jpg"><img src="images/product5_2.jpg"/>
+                    </li>
                     <li><img src="images/product5_3.jpg"/></li>
                     <li><img src="images/product5_4.jpg"/></li>
 
@@ -2762,6 +2765,7 @@ Dell latitude Model                            </span>
         background: #ffff;
         z-index: 6;
         margin: auto;
+        display: none;
     }
 
     #dark {
@@ -2774,6 +2778,7 @@ Dell latitude Model                            </span>
         right: 0;
         top: 0;
         background: rgba(0, 0, 0, 0.3);
+        display: none;
     }
 
     #product_gallery .matn_gallery {
@@ -2806,6 +2811,11 @@ Dell latitude Model                            </span>
         height: 548px;
     }
 
+    #product_gallery .right .item {
+        height: 100%;
+
+    }
+
     #product_gallery .right img {
         max-height: 100%;
         max-width: 100%;
@@ -2817,6 +2827,7 @@ Dell latitude Model                            </span>
         float: left;
         border-right: 2px solid #ccc;
         overflow-y: auto;
+        height: 548px;
     }
 
     #product_gallery .left ul {
@@ -2829,6 +2840,14 @@ Dell latitude Model                            </span>
         width: 100%;
         border-bottom: 1px solid #cccccc;
         text-align: center;
+        opacity: 0.6;
+    }
+
+    #product_gallery .left li.active {
+        width: 100%;
+        border-bottom: 1px solid #cccccc;
+        text-align: center;
+        opacity: 1;
     }
 
     #product_gallery .left li img {
@@ -2837,6 +2856,9 @@ Dell latitude Model                            </span>
 
     }
 
+    #product_gallery .right .item {
+        display: none;
+    }
 </style>
 <div id="product_gallery">
 <span class="matn_gallery">
@@ -2844,33 +2866,15 @@ Dell latitude Model                            </span>
     <span class="close"></span>
 </span>
     <div class="right">
-        <img src="images/products/8/gallery/large/ax1.jpg"/>
+        <img class="mainimage" src=""/>
     </div>
     <div class="left">
         <ul>
-            <li>
+            <li data-main-image="images/products/8/gallery/large/ax1.jpg">
                 <img src="images/products/8/gallery/small/ax1.jpg"/>
             </li>
-            <li>
-                <img src="images/products/8/gallery/small/ax1.jpg"/>
-            </li>
-            <li>
-                <img src="images/products/8/gallery/small/ax1.jpg"/>
-            </li>
-            <li>
-                <img src="images/products/8/gallery/small/ax1.jpg"/>
-            </li>
-            <li>
-                <img src="images/products/8/gallery/small/ax1.jpg"/>
-            </li>
-            <li>
-                <img src="images/products/8/gallery/small/ax1.jpg"/>
-            </li>
-            <li>
-                <img src="images/products/8/gallery/small/ax1.jpg"/>
-            </li>
-            <li>
-                <img src="images/products/8/gallery/small/ax1.jpg"/>
+            <li data-main-image="images/products/8/gallery/large/ax2.jpg">
+                <img src="images/products/8/gallery/small/ax2.jpg"/>
             </li>
         </ul>
     </div>
@@ -2878,17 +2882,40 @@ Dell latitude Model                            </span>
 <div id="dark">
 </div>
 <script>
-    console.log('kun hamed');
-    $("#product_gallery .left").mCustomScrollbar({
+    var productGallery = $('#product_gallery');
+    var productGalleryItems = productGallery.find('.item');
+    function ShowGallery(index) {
+        productGalleryItems.fadeOut(0);
+        productGalleryItems.eq(index).fadeIn(200);
+
+    }
+    var productGalleryThumbnail = productGallery.find('.left ul li');
+    productGalleryThumbnail.click(function () {
+        productGalleryThumbnail.removeClass('active');
+        $(this).toggleClass('active');
+        var MainImageUrl = $(this).attr('data-main-image');
+        productGallery.find('.mainimage').attr('src', MainImageUrl);
+    });
+    productGallery.find('.close').click(function () {
+        productGallery.fadeOut(200);
+        $('#dark').fadeOut(200);
+    });
+    $('.gallery ul li').click(function () {
+        $('#dark').fadeIn(200);
+        productGallery.fadeIn(200);
+        var MainImageUrl = $(this).attr('data-main-image');
+        productGallery.find('.mainimage').attr('src', MainImageUrl);
+    });
+    $("#product_gallery .left ul").mCustomScrollbar({
         setWidth: false,
-        setHeight: 300,
-        setTop: 0,
+        setHeight: false,
+        setTop: false,
         setLeft: 0,
         axis: "y",
         scrollbarPosition: "inside",
         scrollInertia: 950,
         autoDraggerLength: true,
-        autoHideScrollbar: false,
+        autoHideScrollbar: true,
         autoExpandScrollbar: false,
         alwaysShowScrollbar: 0,
         snapAmount: null,
@@ -2911,10 +2938,10 @@ Dell latitude Model                            </span>
         keyboard: {
             enable: true,
             scrollType: "stepLess",
-            scrollAmount: "auto",
+            scrollAmount: "auto"
         },
         contentTouchScroll: 25,
-        advanced:{
+        advanced: {
             autoExpandHorizentalScroll: false,
             autoScrollOnFocus: "input,textarea,select,button,datalist,keygen,a[tabindex],area,object,[contenteditable='true']",
             updateOnContentResize: true,
