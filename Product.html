@@ -14,6 +14,9 @@
     <script src="js/scrollbar/jquery.mCustomScrollbar.js"></script>
     <script src="js/scrollbar/jquery.mousewheel.js"></script>
     <link href="js/scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet"/>
+    <script src="3d/jsc3d.js"></script>
+    <script src="3d/jsc3d.touch.js"></script>
+    <script src="3d/jsc3d.webgl.js"></script>
 </head>
 <body style="margin: 0;background-color: rgba(0,0,0,0.16)">
 <style>
@@ -132,7 +135,8 @@
         padding: 0px;
         box-shadow: 0 2px 3px #aaa;
         border-top: 1px solid rgba(104, 104, 255, 0.05);
-        /*display: none;*/
+        display: none;
+        z-index: 2;
     }
 
     #menu_top > ul > li > ul > li {
@@ -799,7 +803,7 @@
                         padding: 0;
                         box-shadow: 0 2px 2px #736c6c;
                         display: none;
-
+                        background: white;
                     }
 
                     #selector ul li {
@@ -2859,6 +2863,17 @@ Dell latitude Model                            </span>
     #product_gallery .right .item {
         display: none;
     }
+
+    .icon3d {
+        width: 28px;
+        height: 28px;
+        background: url('images/slices.png') no-repeat -363px -117px;
+        position: absolute;
+        left: 4px;
+        top: 4px;
+        display: block;
+
+    }
 </style>
 <div id="product_gallery">
 <span class="matn_gallery">
@@ -2866,10 +2881,15 @@ Dell latitude Model                            </span>
     <span class="close"></span>
 </span>
     <div class="right">
+        <canvas id="cv" width="420px" height="420px"></canvas>
         <img class="mainimage" src=""/>
     </div>
     <div class="left">
         <ul>
+            <li data-main-image="" style="position: relative">
+                <img src="images/products/8/gallery/small/ax1.jpg"/>
+                <span class="icon3d"></span>
+            </li>
             <li data-main-image="images/products/8/gallery/large/ax1.jpg">
                 <img src="images/products/8/gallery/small/ax1.jpg"/>
             </li>
@@ -2882,30 +2902,62 @@ Dell latitude Model                            </span>
 <div id="dark">
 </div>
 <script>
+    //3d image
+    var canvasTag = document.getElementById('cv');
+    var viewer = new JSC3D.Viewer(canvasTag, {
+        InitRotationX: 100,
+        InitRotationy: 100,
+        InitRotationz: 100,
+        SceneUrl: '3d/bmw/bmw.obj',
+        RenderMode: 'texturesmooth'
+    });
+    viewer.init();
+    viewer.update();
+</script>
+<script>
     var productGallery = $('#product_gallery');
     var productGalleryItems = productGallery.find('.item');
-    function ShowGallery(index) {
-        productGalleryItems.fadeOut(0);
-        productGalleryItems.eq(index).fadeIn(200);
+    var productGalleryThumbnail = productGallery.find('.left ul li');
+    function ShowGallery(imageUrl, index) {
 
+
+        productGalleryThumbnail.removeClass('active');
+        productGalleryThumbnail.eq(index).addClass('active');
+        if (imageUrl.length > 0) {
+            productGallery.find('.mainimage').attr('src', imageUrl);
+            $('#cv').fadeOut(0);
+            $('.mainimage').fadeIn(100);
+        } else {
+            $('.mainimage').fadeOut(0);
+            $('#cv').fadeIn(100);
+        }
     }
     var productGalleryThumbnail = productGallery.find('.left ul li');
+
     productGalleryThumbnail.click(function () {
-        productGalleryThumbnail.removeClass('active');
-        $(this).toggleClass('active');
-        var MainImageUrl = $(this).attr('data-main-image');
-        productGallery.find('.mainimage').attr('src', MainImageUrl);
+        var index = $(this).index();
+        var mainImageUrl = $(this).attr('data-main-image');
+        ShowGallery(mainImageUrl, index);
     });
+
+
     productGallery.find('.close').click(function () {
         productGallery.fadeOut(200);
         $('#dark').fadeOut(200);
     });
+
     $('.gallery ul li').click(function () {
         $('#dark').fadeIn(200);
         productGallery.fadeIn(200);
-        var MainImageUrl = $(this).attr('data-main-image');
-        productGallery.find('.mainimage').attr('src', MainImageUrl);
+        var index = $(this).index();
+        if (index < 0) {
+            index = 0;
+        }
+        var mainImageUrl = $(this).attr('data-main-image');
+        ShowGallery(mainImageUrl, index);
     });
+
+
     $("#product_gallery .left ul").mCustomScrollbar({
         setWidth: false,
         setHeight: false,
