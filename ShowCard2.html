@@ -563,14 +563,6 @@
         right: 24px;
     }
 
-    #main {
-        width: 1150px;
-        margin: 10px auto;
-        height: auto;
-        padding: 7px;
-        background: #ffffff;
-    }
-
     .orderstep {
         padding-top: 45px;
         padding-right: 160px;
@@ -591,6 +583,7 @@
     .orderstep ul li:nth-child(3) .title {
         right: -10px;
     }
+
     .orderstep ul li:nth-child(4) .title {
         right: -10px;
     }
@@ -627,6 +620,7 @@
         right: -30px;
         width: 100%;
         font-size: 10pt;
+        margin-top: 10px;
     }
 
     .orderstep ul li.active .title {
@@ -646,6 +640,42 @@
     .orderstep ul li.active .line {
         background: #2396f3;
     }
+
+    .btn_gray {
+        background: #a4a4a4;
+        color: #ffffff;
+        font-family: IRANYekan;
+        font-size: 9pt;
+        display: block;
+        width: 150px;
+        height: 35px;
+        border-radius: 3px;
+        text-align: center;
+        line-height: 33px;
+        float: left;
+        margin-left: 10px;
+        margin-top: 13px;
+    }
+
+    #main .head {
+        float: right;
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    #main .head h4 {
+        font-family: iranyekan;
+        font-size: 10pt;
+        float: right;
+        padding-right: 10px;
+    }
+
+    #main {
+        background: #ffffff;
+        width: 1150px;
+        margin: 10px auto;
+        height: auto
+    }
 </style>
 
 <div id="main">
@@ -658,7 +688,7 @@
 
         </div>
         <ul>
-            <li>
+            <li class="active">
                 <span class="circle"></span>
                 <span class="title">ورود به دیجیکالا</span>
                 <span class="line"></span>
@@ -685,100 +715,127 @@
             </li>
         </ul>
     </div>
+    <div class="head">
+        <h4>
+            انتخاب آدرس
+        </h4>
+        <span class="btn_gray">
+            افزودن آدرس جدید
+        </span>
+    </div>
     <style>
-        .content .right {
-            float: right;
-            width: 540px;
-            border-left: 1px solid #eae2e2;
-        }
-
-        .content .left {
-            float: left;
-            width: 540px;
-        }
-
-        .content .right i {
-            display: block;
-            width: 48px;
-            height: 54px;
-            background: url("images/slices.png") no-repeat scroll -795px -20px;
-            margin: auto;
-        }
-
-        .content .left i {
-            display: block;
-            width: 48px;
-            height: 54px;
-            background: url("images/slices.png") no-repeat scroll -795px -87px;
-            margin: auto;
-        }
-
         .content {
-            float: left;
-            margin-top: 40px;
+            width: 100%;
+            margin-top: 20px;
+            float: right;
         }
 
-        .content p {
-            font-family: IRANYekan;
-            text-align: center;
-        }
-
-        .content .first {
-            font-size: 11pt;
-            font-weight: bold;
-            font-family: IRANYekan;
-        }
-
-        .content .second {
+        .content table {
+            width: 100%;
+            padding: 5px;
+            font-family: iranyekan;
             font-size: 9pt;
-            color: #959595;
+
         }
 
-        .btn_green {
-            background: #4c9948;
-            color: #ffffff;
-            font-family: IRANYekan;
-            font-size: 9pt;
-            display: block;
-            width: 160px;
-            height: 40px;
-            border-radius: 3px;
-            text-align: center;
-            line-height: 36px;
+        .content table td {
+            border-left: 1px solid #d7d7d7;
+            border-bottom: 1px solid #d7d7d7;
+        }
+
+        .content .cyrcle {
+            width: 15px;
+            height: 15px;
+            border: 1px solid #d9d9d9;
+            border-radius: 100%;
             margin: auto;
+            display: block;
         }
 
-        .btn_blue {
-            background: #266ed2;
-            color: #ffffff;
-            font-family: IRANYekan;
-            font-size: 9pt;
+        .content .lastTd {
+            width: 100%;
+            height: 120px;
+            padding: 0;
+        }
+
+        .content .lastTd td {
+            border: none;
+        }
+
+        .content .edit {
+            background: #a6e8aa;
+
+        }
+
+        .content .edit i {
+            width: 19px;
+            height: 19px;
+            background: url("images/slices.png") no-repeat -812px -446px;
+            margin:auto;
             display: block;
-            width: 160px;
-            height: 40px;
-            border-radius: 3px;
-            text-align: center;
-            line-height: 36px;
-            margin: auto;
+
+        }
+
+        .content .remove {
+            background: #f0a7a6;
+
+        }
+
+        .content .remove i {
+            width: 19px;
+            height: 19px;
+            background: url("images/slices.png") no-repeat -813px -510px;
+            margin:auto;
+            display: block;
+
+        }
+        .content .profile td:nth-child(2){
+            /*border-top:1px solid #d7d7d7;*/
+        }
+        .content .profile td:first-child{
+            border-right: 1px solid #e6eeee;
+            border-top:1px solid #e6eeee;
         }
     </style>
     <div class="content">
-        <div class="right">
-            <i></i>
-            <p class="first">عضو دیجیکالا هستید؟</p>
-            <p class="second">.برای تکمیل فرآیند خود وارد شوید</p>
-            <p>
-                <span class="btn_green">ورود به دیجیکالا</span>
-            </p>
-        </div>
-        <div class="left">
-            <i></i>
-            <p class="first">تازه وارد هستید؟</p>
-            <p class="second">برای تکمیل فرآیند خود ثبت نام کنید.</p>
-            <p>
-                <span class="btn_blue">ثبت نام در دیجی کالا</span>
-            </p>
-        </div>
+        <table class="profile" cellspacing="0">
+            <tr>
+                <td style="width: 40px;" rowspan="3">
+                    <span class="cyrcle">
+
+                    </span>
+                </td>
+                <td colspan="3">هادی محمودی</td>
+                <td style="width: 30px;" rowspan="3">
+                    <table cellspacing="0" class="lastTd">
+                        <tr>
+                            <td class="edit">
+                                <i></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="remove">
+                                <i></i>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>استان : تهران</td>
+                <td rowspan="2">آدرس : اصفهان-خیابان جامی شرقی-محله ی پاچنار-پلاک 221 منزل شخصی هادی محمودی
+                    <br>
+                    کد پستی:8754215648
+                </td>
+                <td>شماره تماس :09138508775</td>
+            </tr>
+            <tr>
+                <td style="width: 200px;">شهر : تهران</td>
+                <td style="width: 200px;">شماره تماس اضطراری:03137571348</td>
+            </tr>
+
+        </table>
+
     </div>
 
 </div>
